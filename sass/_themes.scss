@@ -1,0 +1,18 @@
+$img-root-folder: "../images";
+
+$themeCollection: (
+  "materialize": (
+    "primary-image": url(#{$img-root-folder}/theme-materialize.jpg),
+    "primary-color": #e57373,
+    "secondary-color": #26a69a,
+    "text-color-light": white,
+    "text-color-dark": black
+  ),
+  "bw": (
+    "primary-image": url(#{$img-root-folder}/theme-bw.jpg),
+    "primary-color": #323232,
+    "secondary-color": #a2a1a3,
+    "text-color-light": #e7e7e7,
+    "text-color-dark": #242424,
+  )
+) !default;

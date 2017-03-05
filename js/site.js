@@ -15,6 +15,18 @@ $(document).ready(function() {
     // Themify button initialization
     $(".themify-menu").hide();
 
+    // Sticky nav-bar logic as offered by google.
+    // ISSUE: It jumps! Not so fine crafted as expected :(
+    // var getNavbarOffset = function(){
+    //   return $(".nav-sticky-holder").offset().top;
+    // }
+    // var navbarInitialOffset = getNavbarOffset();
+    // $('.nav-sticky-holder').pushpin({
+    //   top: navbarInitialOffset,
+    //   bottom: Infinity,
+    //   offset: 0
+    // });
+
     // Sticky nav-bar logic
     var getNavbarOffset = function(){
       return $(".nav-sticky-holder").offset().top;
@@ -60,3 +72,9 @@ $(document).ready(function() {
         themifyMenuChecker();
     });
 })
+
+var themifyMe = function(themeName){
+  $(document).find("[class*='theme-']").attr("class", function(i, cls){
+    return cls.replace(/theme-(.*)/, "theme-" + themeName);
+  });
+}

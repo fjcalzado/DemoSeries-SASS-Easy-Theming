@@ -1,5 +1,32 @@
-@mixin rounded-corners-all($size) {
-  border-radius: $size;
-  -moz-border-radius: $size;
-  -webkit-border-radius: $size;  
+@import "themes";
+
+/// Themify mixin
+/// @access private
+@mixin themify($property, $key, $themes: $themeCollection) {
+  // Iterate over the themes
+  @each $theme, $themeItem in $themes {
+    // Create a selector CLASS -> THEME and also THEME -> CLASS
+    &.theme-#{$theme},
+    .theme-#{$theme} & {
+      // Output the declaration
+      #{$property}: map-get($themeItem, $key);
+    }
+  }
+}
+
+/// Themify mixin PUBLIC API.
+
+///@acess public
+@mixin background-image($arguments...){
+  @include themify("background-image", $arguments...);
+}
+
+///@acess public
+@mixin color($arguments...){
+  @include themify("color", $arguments...);
+}
+
+///@acess public
+@mixin background-color($arguments...){
+  @include themify("background-color", $arguments...);
 }
