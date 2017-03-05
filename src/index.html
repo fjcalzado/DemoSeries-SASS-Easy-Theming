@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Themify Me!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <!-- <link rel="StyleSheet" href="./content/compile_css/site.css" type="text/css" /> -->
+    <link rel="StyleSheet" href="./css/vanilla.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Header section -->
+    <!-- Jumbo Header -->
+    <div class="header-jumbo">
+        <div class="header-jumbo-title container">
+            <h1>Themes.</h1>
+            <h1>Made.</h1>
+            <h1>Easy.</h1>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-sticky-holder">
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="#" class="brand-logo"><i class="medium material-icons">thumb_up</i>Themify Me!</a>
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#id-key-intro">Tech</a></li>
+                    <li><a href="#id-main-panel">Main</a></li>
+                    <li><a href="#id-secondary-panel-outtro">Outtro</a></li>
+                </ul>
+                <ul class="side-nav" id="nav-mobile">
+                    <li><a href="#id-key-intro">Intro</a></li>
+                    <li><a href="#id-main-panel">Main</a></li>
+                    <li><a href="#id-secondary-panel-outtro">Outtro</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Key Intro Panel -->
+        <div class="key-intro" id="id-key-intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m4 center">
+                        <div class="key-intro-item">
+                            <i class="large material-icons">view_quilt</i>
+                            <h3>Materialize</h3>
+                            <p class="flow-text">Responsive CSS framework based on Material Design by Google</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 center">
+                        <div class="key-intro-item">
+                            <i class="large material-icons">my_location</i>
+                            <h3>SASS</h3>
+                            <p class="flow-text">CSS on steroids: power and elegance to the basic language</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4 center">
+                        <div class="key-intro-item">
+                            <i class="large material-icons">settings_ethernet</i>
+                            <h3>BEM</h3>
+                            <p class="flow-text">A web development approach to achieve flexible and maintainable code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Article Panel -->
+        <div class="articles" id="id-main-panel">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col s12">
+                        <article>
+                            <div class="article-title">
+                                <h2>Layout</h2>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="article-content">
+                                <p class="flow-text"><abbr title="Responsive Web Design">RWD</abbr> is an approach to web design aimed at allowing desktop webpages to be viewed in response to the size of the screen or web browser one is viewing with. Thus, using responsive
+                                    design techniques, webpages layout are enabled to adapt to a <strong>variety of screen sizes</strong>.</p>
+                                <p class="flow-text">A key part of this design approach is the use of <strong>fluid, proportion-based grids</strong>. The fluid grid concept calls for page element sizing to be in <strong>relative units</strong> like percentages, rather than
+                                    absolute units like pixels or points. For that purpose, space is divided in a row-column fashion schema where several elements can share the same row by spanning one or multiple columns.</p>
+                                <p class="flow-text">Implementation of responsive design has led to a common set of layouts frequently used by designers. From a high-level perspective, we could classify them into 5 categories: <em>mostly fluid</em>, <em>column drop</em>,
+                                    <em>layout shifter</em>,
+                                    <em>tiny tweaks</em> and <em>off canvas</em></p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col s12">
+                        <article>
+                            <div class="article-title">
+                                <h2>Themes made by composition</h2>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="article-content">
+                                <p class="flow-text">Another popular pattern starts with a multi-column layout and ends up with a single column layout, dropping columns along the way as screen sizes get narrower. Unlike the Mostly Fluid pattern, the overall size of elements
+                                    in this layout tend to stay consistent.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secondary Panel Outtro -->
+        <div class="" id="id-secondary-panel-outtro">
+        </div>
+
+    </main>
+
+    <!-- Themify floating menu -->
+    <div class="themify-menu">
+        <div class="fixed-action-btn horizontal">
+            <a class="btn-floating btn-large waves-effect themify-button">
+                <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating waves-effect"><i class="material-icons">insert_chart</i></a></li>
+                <li><a class="btn-floating waves-effect"><i class="material-icons">format_quote</i></a></li>
+                <li><a class="btn-floating waves-effect"><i class="material-icons">publish</i></a></li>
+                <li><a class="btn-floating waves-effect"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 footer-col-left">
+                    <h5>Purpose</h5>
+                    <p>Demo site done as part of 2017 LemonCode Front-End Master</p>
+                    <a class="btn" href="http://lemoncode.net/master-frontend/#inicio-banner" target="_blank">Info</a>
+                </div>
+                <div class="col s12 m6 footer-col-right">
+                    <h5>Links</h5>
+                    <ul>
+                        <li><a href="http://lemoncode.net/" target="_blank">LemonCode</a></li>
+                        <li><a href="http://materializecss.com/" target="_blank">Materialize</a></li>
+                        <li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
+                        <li><a href="https://en.bem.info/" target="_blank">BEM</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6 footer-col-left">
+                        Copyright &copy 2017 Javier Calzado
+                    </div>
+                    <div class="col s12 m6 footer-col-right">
+                        <a href="mailto:fjcalzadosp@gmail.com">
+                            <i class="tiny material-icons">email</i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Materialize CDN minified JavaScript -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./js/site.js"></script>
+</body>
+
+</html>

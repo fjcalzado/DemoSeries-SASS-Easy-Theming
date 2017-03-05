@@ -1,0 +1,21 @@
+{
+  "name": "sass-easy-theming",
+  "version": "1.0.0",
+  "description": "Live demo intended to easily themify a website using SASS and BEM methodology to generate and apply themes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sass",
+    "bem"
+  ],
+  "author": "Javier Calzado",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-open": "^2.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

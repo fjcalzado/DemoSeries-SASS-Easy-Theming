@@ -1,0 +1,75 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css?family=Raleway:800";
+@import "https://fonts.googleapis.com/css?family=Share:800";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:800";
+
+/*Header*/
+.header-jumbo{
+  background-image: url("../images/studio2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.header-jumbo-title{
+  padding: 5vh 0 5vh 0;
+}
+
+.header-jumbo-title h1{
+    color: white;
+    text-align: right;
+    font-weight: bolder;
+    font-size: 17vmin;
+    margin: 0;
+}
+
+/*MAIN*/
+
+.key-intro{
+  padding: 6rem 0 2rem 0;
+  color: white;
+  background-color: lightgrey;
+}
+
+.key-intro-item{
+  padding: 1rem;
+}
+
+.articles article{
+  padding: 4rem 0 2rem 0;
+}
+
+/*Themify Menu*/
+@keyframes highlight-expand{
+  0% { }
+  50% {filter: brightness(150%) saturate(150%); }
+  100% { }
+}
+
+.themify-button{
+  animation-name: highlight-expand;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/*Footer*/
+.footer-col-left {
+    color: white;
+    text-align: right;
+}
+
+.footer-col-right {
+    color: white;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-col-left {
+        color: white;
+        text-align: center;
+    }
+    .footer-col-right {
+        color: white;
+        text-align: center;
+    }
+}
