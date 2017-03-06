@@ -1,249 +1,130 @@
 @import "init";
 @import "mixins";
 
+// General
+body{
+  @include font-family("primary-font");
+}
+
 /*HEADER SECTION*/
 .header-jumbo {
-    @include background-image("primary-image");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+    @include background-image("primary-image");
 
     &__title {
         padding: 5vh 0;
 
-        h1{
-          @include color("text-color-light");
-          text-align: right;
-          font-weight: bolder;
-          font-size: 17vmin;
-          margin: 0;
+        h1 {
+            text-align: right;
+            font-weight: bolder;
+            font-size: 17vmin;
+            margin: 0;
+            @include color("text-color-light");
         }
+    };
+}
+
+.nav-sticky {
+    @include background("primary-color");
+    @include box-shadow("shadow-dark");
+
+    a {
+        @include color("text-color-light");
+    }
+
+    .brand-logo .material-icons {
+        @include color("text-color-light");
+    }
+}
+/*MAIN*/
+.key-intro {
+    padding-top: 2rem;
+    @include color("text-color-light");
+    @include background("grey-tone");
+
+    &__title {
+        padding: 1rem;
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+    .col {
+        padding: 2rem 0;
+    }
+
+    &__item {
+        padding: 1rem;
     }
 }
 
-/*MAIN*/
-.key-intro {
-    padding: 6rem 0 2rem;
-    color: white;
-    background-color: lightgrey;
-}
+.articles {
+    article {
+        padding: 4rem 0 2rem;
+        @include color("text-color-dark");
 
-.key-intro-item {
-    padding: 1rem;
+        a {
+            @include color("link-color-dark");
+        }
+    }
 }
-
-.articles article {
-    padding: 4rem 0 2rem;
-}
-/*Themify Menu*/
+/*Themify Tool*/
 @keyframes highlight-expand {
     0% {}
 
     50% {
-        filter: brightness(150%) saturate(150%);
+        filter: brightness(130%) saturate(150%);
     }
 
     100% {}
 }
 
-.themify-button {
-    animation-name: highlight-expand;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+.themify-tool {
+    &__button {
+        @include background("secondary-color");
+        animation-name: highlight-expand;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    &__sub-button {
+        @include background("primary-color");
+    }
 }
 /*Footer*/
-.footer-col-left {
-    color: white;
-    text-align: right;
-}
+.page-footer {
+    @include color("text-color-light");
+    @include background("primary-color");
 
-.footer-col-right {
-    color: white;
-    text-align: left;
-}
-@media screen and (max-width: 600px) {
-    .footer-col-left {
-        color: white;
-        text-align: center;
+    a {
+        @include color("link-color-light");
+        @include text-shadow("shadow-light");
+
+        &:hover{
+            @include color("text-color-light");
+        }
     }
 
-    .footer-col-right {
-        color: white;
-        text-align: center;
+    .btn {
+        @include background("secondary-color");
+        @include color("text-color-light");
+    }
+
+    &__col-left {
+        text-align: right;
+    }
+
+    &__col-right {
+        text-align: left;
+    }
+    @media screen and (max-width: 600px) {
+        &__col-left,
+        &__col-right {
+            text-align: center;
+            padding: 1rem 0 0;
+        }
     }
 }
-//
-// /* Basics */
-// html {
-//     font-family: 'Raleway', sans-serif;
-//     font-size: 14px;
-// }
-//
-// body {
-//     background: black;
-// }
-//
-// h1 {
-//     font-size: 24px;
-// }
-//
-// h2 {
-//     font-size: 18px;
-// }
-//
-// h3 {
-//     font-size: 16px;
-// }
-//
-// /* Layout */
-// .container {
-//     width: 1200px;
-//     height: inherit;
-//     margin-left: auto;
-//     margin-right: auto;
-//     background: #FFF;
-//     padding: 25px;
-//     color: black;
-// }
-//
-// /* Sections */
-// header {
-//     border-bottom: 5px solid greenyellow;
-//     background-color: darkgrey;
-//     padding-left: 30px;
-//     padding-right: 30px;
-//     padding-top: 30px;
-//     min-height: 70px;
-//     h1 {
-//         font-size: 24px;
-//         font-family: 'Share', cursive;
-//         color: yellowgreen;
-//     }
-// }
-//
-// nav {
-//     font-size: 16px;
-//     font-weight: bold;
-//     float: right;
-//     color: white;
-//
-//     ul {
-//         list-style-type: none;
-//
-//         li {
-//             float: left;
-//             margin: 2px;
-//         }
-//
-//         a {
-//             text-decoration: none;
-//             color: white;
-//             &:hover {
-//                 text-decoration: underline;
-//                 color: yellowgreen;
-//             }
-//         }
-//     }
-// }
-//
-// footer {
-//     font-size: 9px;
-//     text-align: center;
-//     color: white;
-//
-//     position: fixed;
-//     left: 0px;
-//     bottom: 0px;
-//     width: 97%;
-//
-//     padding-left: 30px;
-//     padding-right: 30px;
-//     padding-top: 30px;
-//     min-height: 70px;
-//
-//     border-top: 5px solid greenyellow;
-//     background-color: darkgrey;
-// }
-//
-//
-// /* Forms */
-// .contact-form {
-//     background: #f8f8f8;
-//     width: 480px;
-//     height: 380px;
-//     margin-left: auto;
-//     margin-right: auto;
-//     border: black 2px solid;
-//     padding: 5px;
-//
-//
-//     input[type=text], textarea {
-//         font-family: "Open Sans", Verdana, Helvetica, sans-serif;
-//         font-size: 18px;
-//         background: #e6e6e6;
-//         width: 350px;
-//         border: 1px #000 solid;
-//         float: right;
-//     }
-//
-//     textarea {
-//       @extend input[type=text];
-//       height: 100px;
-//       resize: none;
-//     }
-//
-//     label {
-//         width: 150px;
-//     }
-//
-//     textarea {
-//         height: 100px;
-//         font-family: "Open Sans", Verdana, Helvetica, sans-serif;
-//         resize: none;
-//     }
-// }
-//
-// .form-statement {
-//     padding: 20px;
-//     display: block;
-// }
-//
-// .contact-form input[type=submit] {
-//     float: right;
-//     border: 2px solid yellowgreen;
-//     color: white;
-//     background-color: black;
-//     @include rounded-corners-all(30px);
-// }
-//
-// .form-submit {
-//     display: block;
-//     margin-top: 100px;
-// }
-//
-// .about {
-//     background-color: white;
-//     width: 480px;
-//     height: 275px;
-//     margin-top: 1em;
-//     margin-left: auto;
-//     margin-right: auto;
-//     border: black 2px solid;
-//     padding: 5px;
-// }
-//
-// .about img {
-//     max-width: 50%;
-//     max-height: 50%;
-//     padding: 5px;
-// }
-//
-// .about img:hover {
-//     -webkit-filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
-//     filter: brightness(50%) sepia(1)  hue-rotate(132deg) saturate(103.2%) brightness(91.2%);
-// }
-//
-// footer p:after {
-//     margin-left: 5px;
-//     content: '\00A9';
-// }
