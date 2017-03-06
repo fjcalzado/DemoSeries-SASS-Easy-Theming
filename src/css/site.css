@@ -2,8 +2,8 @@
 @import "https://fonts.googleapis.com/css?family=Raleway:0,800";
 @import "https://fonts.googleapis.com/css?family=Share:0,400";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:0,800";
-body.theme-materialize,
-.theme-materialize body {
+body.theme-materialize-plain,
+.theme-materialize-plain body {
   font-family: Open Sans;
   transition-property: font-family;
   transition-duration: 1.5s; }
@@ -24,8 +24,8 @@ body.theme-contrast,
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
-  .header-jumbo.theme-materialize,
-  .theme-materialize .header-jumbo {
+  .header-jumbo.theme-materialize-plain,
+  .theme-materialize-plain .header-jumbo {
     background-image: url(../images/theme-materialize.jpg);
     transition-property: background-image;
     transition-duration: 1.5s; }
@@ -46,8 +46,8 @@ body.theme-contrast,
       font-weight: bolder;
       font-size: 17vmin;
       margin: 0; }
-      .header-jumbo__title h1.theme-materialize,
-      .theme-materialize .header-jumbo__title h1 {
+      .header-jumbo__title h1.theme-materialize-plain,
+      .theme-materialize-plain .header-jumbo__title h1 {
         color: white;
         font-family: Open Sans;
         transition-property: color, font-family;
@@ -64,8 +64,8 @@ body.theme-contrast,
         transition-property: color, font-family;
         transition-duration: 1.5s; }
 
-.nav-sticky.theme-materialize,
-.theme-materialize .nav-sticky {
+.nav-sticky.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky {
   background: #e57171;
   box-shadow: 0 2px 2px gray;
   transition-property: background, box-shadow;
@@ -85,8 +85,8 @@ body.theme-contrast,
   transition-property: background, box-shadow;
   transition-duration: 1.5s; }
 
-.nav-sticky a.theme-materialize,
-.theme-materialize .nav-sticky a {
+.nav-sticky a.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky a {
   color: white;
   transition-property: color;
   transition-duration: 1.5s; }
@@ -103,8 +103,8 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky .brand-logo .material-icons.theme-materialize,
-.theme-materialize .nav-sticky .brand-logo .material-icons {
+.nav-sticky .brand-logo .material-icons.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky .brand-logo .material-icons {
   color: white;
   transition-property: color;
   transition-duration: 1.5s; }
@@ -124,35 +124,26 @@ body.theme-contrast,
 /*MAIN*/
 .key-intro {
   padding-top: 2rem; }
-  .key-intro.theme-materialize,
-  .theme-materialize .key-intro {
+  .key-intro.theme-materialize-plain,
+  .theme-materialize-plain .key-intro {
     color: white;
-    transition-property: color;
+    background: lightgrey;
+    text-shadow: 0 0 3px gray;
+    transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
   .key-intro.theme-bw,
   .theme-bw .key-intro {
     color: white;
-    transition-property: color;
+    background: lightgrey;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+    transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
   .key-intro.theme-contrast,
   .theme-contrast .key-intro {
     color: #ff8800;
-    transition-property: color;
-    transition-duration: 1.5s; }
-  .key-intro.theme-materialize,
-  .theme-materialize .key-intro {
-    background: lightgrey;
-    transition-property: background;
-    transition-duration: 1.5s; }
-  .key-intro.theme-bw,
-  .theme-bw .key-intro {
-    background: lightgrey;
-    transition-property: background;
-    transition-duration: 1.5s; }
-  .key-intro.theme-contrast,
-  .theme-contrast .key-intro {
     background: #82a3bf;
-    transition-property: background;
+    text-shadow: 0 0 3px gray;
+    transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
   .key-intro__title {
     padding: 1rem; }
@@ -165,8 +156,8 @@ body.theme-contrast,
 
 .articles article {
   padding: 4rem 0 2rem; }
-  .articles article.theme-materialize,
-  .theme-materialize .articles article {
+  .articles article.theme-materialize-plain,
+  .theme-materialize-plain .articles article {
     color: black;
     transition-property: color;
     transition-duration: 1.5s; }
@@ -180,8 +171,8 @@ body.theme-contrast,
     color: #121212;
     transition-property: color;
     transition-duration: 1.5s; }
-  .articles article a.theme-materialize,
-  .theme-materialize .articles article a {
+  .articles article a.theme-materialize-plain,
+  .theme-materialize-plain .articles article a {
     color: #410c0c;
     transition-property: color;
     transition-duration: 1.5s; }
@@ -207,8 +198,8 @@ body.theme-contrast,
   animation-name: highlight-expand;
   animation-duration: 2s;
   animation-iteration-count: infinite; }
-  .themify-tool__button.theme-materialize,
-  .theme-materialize .themify-tool__button {
+  .themify-tool__button.theme-materialize-plain,
+  .theme-materialize-plain .themify-tool__button {
     background: #27a599;
     transition-property: background;
     transition-duration: 1.5s; }
@@ -223,8 +214,8 @@ body.theme-contrast,
     transition-property: background;
     transition-duration: 1.5s; }
 
-.themify-tool__sub-button.theme-materialize,
-.theme-materialize .themify-tool__sub-button {
+.themify-tool__sub-button.theme-materialize-plain,
+.theme-materialize-plain .themify-tool__sub-button {
   background: #e57171;
   transition-property: background;
   transition-duration: 1.5s; }
@@ -242,8 +233,8 @@ body.theme-contrast,
   transition-duration: 1.5s; }
 
 /*Footer*/
-.page-footer.theme-materialize,
-.theme-materialize .page-footer {
+.page-footer.theme-materialize-plain,
+.theme-materialize-plain .page-footer {
   color: white;
   background: #e57171;
   transition-property: color, background;
@@ -263,8 +254,8 @@ body.theme-contrast,
   transition-property: color, background;
   transition-duration: 1.5s; }
 
-.page-footer a.theme-materialize,
-.theme-materialize .page-footer a {
+.page-footer a.theme-materialize-plain,
+.theme-materialize-plain .page-footer a {
   color: #6eddd2;
   text-shadow: 1px 1px 2px gray;
   transition-property: color, text-shadow;
@@ -284,8 +275,8 @@ body.theme-contrast,
   transition-property: color, text-shadow;
   transition-duration: 1.5s; }
 
-.page-footer a:hover.theme-materialize,
-.theme-materialize .page-footer a:hover {
+.page-footer a:hover.theme-materialize-plain,
+.theme-materialize-plain .page-footer a:hover {
   color: white;
   transition-property: color;
   transition-duration: 0.25s; }
@@ -302,8 +293,8 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 0.25s; }
 
-.page-footer .btn.theme-materialize,
-.theme-materialize .page-footer .btn {
+.page-footer .btn.theme-materialize-plain,
+.theme-materialize-plain .page-footer .btn {
   background: #27a599;
   transition-property: background;
   transition-duration: 1.5s; }

@@ -40,8 +40,7 @@ body{
 /*MAIN*/
 .key-intro {
     padding-top: 2rem;
-    @include themify(color, text-color-light);
-    @include themify(background, grey-tone);
+    @include themify((color, background, text-shadow), (text-color-light, grey-tone, shadow-difuse));
 
     &__title {
         padding: 1rem;
