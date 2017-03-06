@@ -12,16 +12,13 @@ $(document).ready(function() {
     // Side-nav initialization
     $(".button-collapse").sideNav();
 
-    // Themify button initialization
-    $(".themify-menu").hide();
-
     // Sticky nav-bar logic as offered by google.
     // ISSUE: It jumps! Not so fine crafted as expected :(
     // var getNavbarOffset = function(){
-    //   return $(".nav-sticky-holder").offset().top;
+    //   return $(".nav-sticky").offset().top;
     // }
     // var navbarInitialOffset = getNavbarOffset();
-    // $('.nav-sticky-holder').pushpin({
+    // $('.nav-sticky').pushpin({
     //   top: navbarInitialOffset,
     //   bottom: Infinity,
     //   offset: 0
@@ -29,15 +26,15 @@ $(document).ready(function() {
 
     // Sticky nav-bar logic
     var getNavbarOffset = function(){
-      return $(".nav-sticky-holder").offset().top;
+      return $(".nav-sticky").offset().top;
     }
     var navbarInitialOffset = getNavbarOffset();
-    var navbarHeight = $(".nav-sticky-holder").height();
+    var navbarHeight = $(".nav-sticky").height();
     var stickyNavChecker = function() {
         var currentScrollTop = $(window).scrollTop();
         if (currentScrollTop > navbarInitialOffset) {
             // Take navbar out from layout to fixed position
-            $(".nav-sticky-holder").css({
+            $(".nav-sticky").css({
                 'position': 'fixed',
                 "top": 0,
                 "width": "100%"
@@ -45,18 +42,21 @@ $(document).ready(function() {
             $("main").css("padding-top", navbarHeight);
         } else {
             // Put back navbar into DOM layout
-            $(".nav-sticky-holder").css("position", "static");
+            $(".nav-sticky").css("position", "static");
             $("main").css("padding-top", 0);
         }
     }
 
+    // Themify button initialization
+    //$(".themify-tool").hide();
+
     // Themify button logic
     var themifyMenuChecker = function() {
         var currentScrollTop = $(window).scrollTop();
-        if ((currentScrollTop > (navbarInitialOffset / 3)) && !$("footer").isInViewport()) {
-            $(".themify-menu").show("slow");
+        if (/*(currentScrollTop > (navbarInitialOffset / 3)) &&*/ !$("footer").isInViewport()) {
+            $(".themify-tool").show("slow");
         } else {
-            $(".themify-menu").hide("slow");
+            $(".themify-tool").hide("slow");
         }
     }
 

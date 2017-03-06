@@ -1,18 +1,45 @@
+// Global Themes variables.
+$theme-transition-duration: 1.5s;
 $img-root-folder: "../images";
 
+// Themes definition.
 $themeCollection: (
   "materialize": (
+    "primary-font": Open Sans,
     "primary-image": url(#{$img-root-folder}/theme-materialize.jpg),
-    "primary-color": #e57373,
-    "secondary-color": #26a69a,
+    "primary-color": hsl(0, 69%, 67%),
+    "secondary-color": hsl(174, 62%, 40%),
     "text-color-light": white,
-    "text-color-dark": black
+    "text-color-dark": black,
+    "link-color-light": hsl(174, 62%, 65%),
+    "link-color-dark": hsl(0, 69%, 15%),
+    "grey-tone": lightgrey,
+    "shadow-light": 1px 1px 2px hsl(0, 0%, 50%),
+    "shadow-dark": 0 2px 2px hsl(0, 0%, 50%)
   ),
   "bw": (
+    "primary-font": Raleway,
     "primary-image": url(#{$img-root-folder}/theme-bw.jpg),
-    "primary-color": #323232,
-    "secondary-color": #a2a1a3,
-    "text-color-light": #e7e7e7,
-    "text-color-dark": #242424,
+    "primary-color": hsl(0, 0%, 19%),
+    "secondary-color": hsl(240, 0%, 63%),
+    "text-color-light": white,
+    "text-color-dark": hsl(0, 0%, 29%),
+    "link-color-light": hsl(0, 3%, 79%),
+    "link-color-dark": black,
+    "grey-tone": lightgrey,
+    "shadow-light": 1px 1px 2px gray,
+    "shadow-dark": 0 2px 6px hsl(0, 0%, 25%)
+  ),
+  "contrast": (
+    "primary-image": url(#{$img-root-folder}/theme-bw.jpg),
+    "primary-color": hsl(208, 82%, 43%),
+    "secondary-color": hsl(32, 100%, 50%),
+    "text-color-light": hsl(32, 100%, 50%),
+    "text-color-dark": hsl(0, 0%, 7%),
+    "link-color-light": hsl(30, 90%, 98%),
+    "link-color-dark": hsl(208, 82%, 13%),
+    "grey-tone": hsl(208, 32%, 63%),
+    "shadow-light": 1px 1px 2px gray,
+    "shadow-dark": 0 2px 6px hsl(0, 0%, 25%)
   )
 ) !default;
