@@ -3,7 +3,7 @@
 
 // General
 body{
-  @include font-family("primary-font");
+  @include themify(font-family, primary-font);
 }
 
 /*HEADER SECTION*/
@@ -11,7 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    @include background-image("primary-image");
+    @include themify(background-image, primary-image);
 
     &__title {
         padding: 5vh 0;
@@ -21,28 +21,27 @@ body{
             font-weight: bolder;
             font-size: 17vmin;
             margin: 0;
-            @include color("text-color-light");
+            @include themify((color, font-family), (text-color-light, primary-font));
         }
     };
 }
 
 .nav-sticky {
-    @include background("primary-color");
-    @include box-shadow("shadow-dark");
+    @include themify((background,box-shadow),(primary-color, shadow-dark));
 
     a {
-        @include color("text-color-light");
+        @include themify(color, text-color-light);
     }
 
     .brand-logo .material-icons {
-        @include color("text-color-light");
+        @include themify(color, text-color-light);
     }
 }
 /*MAIN*/
 .key-intro {
     padding-top: 2rem;
-    @include color("text-color-light");
-    @include background("grey-tone");
+    @include themify(color, text-color-light);
+    @include themify(background, grey-tone);
 
     &__title {
         padding: 1rem;
@@ -64,10 +63,10 @@ body{
 .articles {
     article {
         padding: 4rem 0 2rem;
-        @include color("text-color-dark");
+        @include themify(color, text-color-dark);
 
         a {
-            @include color("link-color-dark");
+            @include themify(color, link-color-dark);
         }
     }
 }
@@ -84,33 +83,29 @@ body{
 
 .themify-tool {
     &__button {
-        @include background("secondary-color");
+        @include themify(background, secondary-color);
         animation-name: highlight-expand;
         animation-duration: 2s;
         animation-iteration-count: infinite;
     }
 
     &__sub-button {
-        @include background("primary-color");
+        @include themify(background, primary-color);
     }
 }
 /*Footer*/
 .page-footer {
-    @include color("text-color-light");
-    @include background("primary-color");
-
+    @include themify((color, background), (text-color-light, primary-color));
     a {
-        @include color("link-color-light");
-        @include text-shadow("shadow-light");
+        @include themify((color, text-shadow), (link-color-light, shadow-light));
 
         &:hover{
-            @include color("text-color-light");
+            @include themify(color, text-color-light, 0.25s);
         }
     }
 
     .btn {
-        @include background("secondary-color");
-        @include color("text-color-light");
+        @include themify(background, secondary-color);
     }
 
     &__col-left {

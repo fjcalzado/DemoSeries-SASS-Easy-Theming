@@ -51,7 +51,7 @@ $(document).ready(function() {
     //$(".themify-tool").hide();
 
     // Themify button logic
-    var themifyMenuChecker = function() {
+    var themifyToolChecker = function() {
         var currentScrollTop = $(window).scrollTop();
         if (/*(currentScrollTop > (navbarInitialOffset / 3)) &&*/ !$("footer").isInViewport()) {
             $(".themify-tool").show("slow");
@@ -63,13 +63,12 @@ $(document).ready(function() {
     // Bind checkers to Scroll and Resize
     $(window).scroll(function() {
         stickyNavChecker();
-        themifyMenuChecker();
+        //themifyToolChecker();
     });
-
     $(window).resize(function() {
         navbarInitialOffset = getNavbarOffset();
         stickyNavChecker();
-        themifyMenuChecker();
+        //themifyToolChecker();
     });
 })
 

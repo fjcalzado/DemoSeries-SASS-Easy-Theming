@@ -1,71 +1,26 @@
 @import "themes";
 
-// @mixin themify($properties, $keys, $transition-duration: $theme-transition-duration, $themes: $themeCollection) {
-//   // Iterate over the themes
-//   @each $theme, $themeItem in $themes {
-//     // Create a selector CLASS -> THEME and also THEME -> CLASS
-//     &.theme-#{$theme},
-//     .theme-#{$theme} & {
-//       @for $i from 1 through length($properties){
-//         $property: nth($properties,$i);
-//         $key: nth($keys,$i);
-//         #{$property}: map-get($themeItem, $key);
-//       }
-//
-//       transition: #{$properties};
-//       transition-duration: $transition-duration;
-//     }
-//   }
-// }
-
-/// Themify mixin
-/// @access private
-@mixin themify($property, $key, $transition-duration: $theme-transition-duration, $themes: $themeCollection) {
-  // Iterate over the themes
+/// Single Themify mixin. It accepts several properties and keys.
+/// @access public.
+/// @param {List} $properties - Properties to themify.
+/// @param {List} $keys - Theme items to map properies against to.
+/// @param {} $transition-duration - Duration in seconds for transition effect.
+/// @param {Map} $themes [$themes] - Map of themes to use.
+@mixin themify($properties, $keys, $transition-duration: $theme-transition-duration, $themes: $themeCollection) {
+  // Iterate over the themes.
   @each $theme, $themeItem in $themes {
-    // Create a selector CLASS -> THEME and also THEME -> CLASS
+    // Create a selector CLASS -> THEME and also THEME -> CLASS.
     &.theme-#{$theme},
     .theme-#{$theme} & {
-      // Output the declaration
-      #{$property}: map-get($themeItem, $key);
-      //transition: #{$property} $transition-duration;
+      // Iterate over each property-key value.
+      @for $i from 1 through length($properties){
+        $property: nth($properties,$i);
+        $key: nth($keys,$i);
+        #{$property}: map-get($themeItem, $key);
+      }
+      // Finally add transitions over themified properties.
+      transition-property: #{$properties};
+      transition-duration: $transition-duration;
     }
   }
-}
-
-/// Themify mixin PUBLIC API.
-
-///@acess public
-@mixin font-family($arguments...){
-  @include themify("font-family", $arguments...);
-}
-
-///@acess public
-@mixin color($arguments...){
-  @include themify("color", $arguments...);
-}
-
-///@acess public
-@mixin background($arguments...){
-  @include themify("background", $arguments...);
-}
-
-///@acess public
-@mixin background-color($arguments...){
-  @include themify("background-color", $arguments...);
-}
-
-///@acess public
-@mixin background-image($arguments...){
-  @include themify("background-image", $arguments...);
-}
-
-///@acess public
-@mixin text-shadow($arguments...){
-  @include themify("text-shadow", $arguments...);
-}
-
-///@acess public
-@mixin box-shadow($arguments...){
-  @include themify("box-shadow", $arguments...);
 }
