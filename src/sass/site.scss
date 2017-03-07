@@ -11,7 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    @include themify((background-image, background-color), (primary-image, secondary-color));
+    @include themify((background-image, background-color), ("", secondary-color));
 
     &__title {
         padding: 5vh 0;
@@ -36,7 +36,15 @@ body{
     .brand-logo .material-icons {
         @include themify(color, text-color-light);
     }
+
+    .side-nav {
+        a {
+            @include themify(color, text-color-dark);                
+        }        
+    }
 }
+
+
 /*MAIN*/
 .key-intro {
     padding-top: 2rem;
