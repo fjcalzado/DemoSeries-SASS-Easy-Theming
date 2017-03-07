@@ -1,22 +1,68 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "https://fonts.googleapis.com/css?family=Raleway:0,800";
-@import "https://fonts.googleapis.com/css?family=Share:0,400";
+@import "https://fonts.googleapis.com/css?family=Ubuntu:0,800";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:0,800";
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:0,800";
+@import "https://fonts.googleapis.com/css?family=Montserrat:0,800";
+/*GENERAL*/
 body.theme-bw,
 .theme-bw body {
   font-family: Raleway;
   transition-property: font-family;
   transition-duration: 1.5s; }
 
-body.theme-materialize-plain,
-.theme-materialize-plain body {
+body.theme-peach-azure,
+.theme-peach-azure body {
   font-family: Open Sans;
+  transition-property: font-family;
+  transition-duration: 1.5s; }
+
+body.theme-teal-orange,
+.theme-teal-orange body {
+  font-family: Ubuntu;
   transition-property: font-family;
   transition-duration: 1.5s; }
 
 body.theme-contrast,
 .theme-contrast body {
+  font-family: Roboto Mono;
   transition-property: font-family;
+  transition-duration: 1.5s; }
+
+body.theme-purple,
+.theme-purple body {
+  font-family: Montserrat;
+  transition-property: font-family;
+  transition-duration: 1.5s; }
+
+.material-tooltip .backdrop.theme-bw,
+.theme-bw .material-tooltip .backdrop {
+  background-color: #a1a1a1;
+  transition-property: background-color;
+  transition-duration: 1.5s; }
+
+.material-tooltip .backdrop.theme-peach-azure,
+.theme-peach-azure .material-tooltip .backdrop {
+  background-color: #27a599;
+  transition-property: background-color;
+  transition-duration: 1.5s; }
+
+.material-tooltip .backdrop.theme-teal-orange,
+.theme-teal-orange .material-tooltip .backdrop {
+  background-color: #ff8800;
+  transition-property: background-color;
+  transition-duration: 1.5s; }
+
+.material-tooltip .backdrop.theme-contrast,
+.theme-contrast .material-tooltip .backdrop {
+  background-color: #f5ec3d;
+  transition-property: background-color;
+  transition-duration: 1.5s; }
+
+.material-tooltip .backdrop.theme-purple,
+.theme-purple .material-tooltip .backdrop {
+  background-color: #f28cd9;
+  transition-property: background-color;
   transition-duration: 1.5s; }
 
 /*HEADER SECTION*/
@@ -27,17 +73,31 @@ body.theme-contrast,
   transition-property: background-color, color;
   transition-duration: 0s; }
 
-.header-jumbo.theme-materialize-plain,
-.theme-materialize-plain .header-jumbo {
+.header-jumbo.theme-peach-azure,
+.theme-peach-azure .header-jumbo {
   background-color: #27a599;
   color: #e57171;
   transition-property: background-color, color;
   transition-duration: 0s; }
 
+.header-jumbo.theme-teal-orange,
+.theme-teal-orange .header-jumbo {
+  background-color: #ff8800;
+  color: #153c47;
+  transition-property: background-color, color;
+  transition-duration: 0s; }
+
 .header-jumbo.theme-contrast,
 .theme-contrast .header-jumbo {
-  background-color: #ff8800;
-  color: #1474c8;
+  background-color: #f5ec3d;
+  color: #0d0d0d;
+  transition-property: background-color, color;
+  transition-duration: 0s; }
+
+.header-jumbo.theme-purple,
+.theme-purple .header-jumbo {
+  background-color: #f28cd9;
+  color: #35134e;
   transition-property: background-color, color;
   transition-duration: 0s; }
 
@@ -49,12 +109,20 @@ body.theme-contrast,
   .theme-bw .header-jumbo__canvas {
     transition-property: background;
     transition-duration: 1.5s; }
-  .header-jumbo__canvas.theme-materialize-plain,
-  .theme-materialize-plain .header-jumbo__canvas {
+  .header-jumbo__canvas.theme-peach-azure,
+  .theme-peach-azure .header-jumbo__canvas {
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .header-jumbo__canvas.theme-teal-orange,
+  .theme-teal-orange .header-jumbo__canvas {
     transition-property: background;
     transition-duration: 1.5s; }
   .header-jumbo__canvas.theme-contrast,
   .theme-contrast .header-jumbo__canvas {
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .header-jumbo__canvas.theme-purple,
+  .theme-purple .header-jumbo__canvas {
     transition-property: background;
     transition-duration: 1.5s; }
 
@@ -72,21 +140,34 @@ body.theme-contrast,
     font-family: Raleway;
     transition-property: color, font-family;
     transition-duration: 1.5s; }
-  .header-jumbo__title h1.theme-materialize-plain,
-  .theme-materialize-plain .header-jumbo__title h1 {
+  .header-jumbo__title h1.theme-peach-azure,
+  .theme-peach-azure .header-jumbo__title h1 {
     color: white;
     font-family: Open Sans;
     transition-property: color, font-family;
     transition-duration: 1.5s; }
+  .header-jumbo__title h1.theme-teal-orange,
+  .theme-teal-orange .header-jumbo__title h1 {
+    color: #fff3e6;
+    font-family: Ubuntu;
+    transition-property: color, font-family;
+    transition-duration: 1.5s; }
   .header-jumbo__title h1.theme-contrast,
   .theme-contrast .header-jumbo__title h1 {
-    color: #ff8800;
+    color: white;
+    font-family: Roboto Mono;
+    transition-property: color, font-family;
+    transition-duration: 1.5s; }
+  .header-jumbo__title h1.theme-purple,
+  .theme-purple .header-jumbo__title h1 {
+    color: white;
+    font-family: Montserrat;
     transition-property: color, font-family;
     transition-duration: 1.5s; }
 
 .header-jumbo__updater {
-  padding-top: 3vmin; }
-  .header-jumbo__updater .btn {
+  padding: 3vmin 0 0 3vmin; }
+  .header-jumbo__updater .btn-floating {
     background-color: rgba(0, 0, 0, 0.1); }
 
 .nav-sticky.theme-bw,
@@ -96,16 +177,30 @@ body.theme-contrast,
   transition-property: background, box-shadow;
   transition-duration: 1.5s; }
 
-.nav-sticky.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky {
+.nav-sticky.theme-peach-azure,
+.theme-peach-azure .nav-sticky {
   background: #e57171;
   box-shadow: 0 2px 2px gray;
   transition-property: background, box-shadow;
   transition-duration: 1.5s; }
 
+.nav-sticky.theme-teal-orange,
+.theme-teal-orange .nav-sticky {
+  background: #153c47;
+  box-shadow: 0 2px 6px #404040;
+  transition-property: background, box-shadow;
+  transition-duration: 1.5s; }
+
 .nav-sticky.theme-contrast,
 .theme-contrast .nav-sticky {
-  background: #1474c8;
+  background: #0d0d0d;
+  box-shadow: 0 2px 6px #404040;
+  transition-property: background, box-shadow;
+  transition-duration: 1.5s; }
+
+.nav-sticky.theme-purple,
+.theme-purple .nav-sticky {
+  background: #35134e;
   box-shadow: 0 2px 6px #404040;
   transition-property: background, box-shadow;
   transition-duration: 1.5s; }
@@ -116,15 +211,27 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky a.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky a {
+.nav-sticky a.theme-peach-azure,
+.theme-peach-azure .nav-sticky a {
   color: white;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky a.theme-teal-orange,
+.theme-teal-orange .nav-sticky a {
+  color: #fff3e6;
   transition-property: color;
   transition-duration: 1.5s; }
 
 .nav-sticky a.theme-contrast,
 .theme-contrast .nav-sticky a {
-  color: #ff8800;
+  color: white;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky a.theme-purple,
+.theme-purple .nav-sticky a {
+  color: white;
   transition-property: color;
   transition-duration: 1.5s; }
 
@@ -134,15 +241,27 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky .brand-logo .material-icons.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky .brand-logo .material-icons {
+.nav-sticky .brand-logo .material-icons.theme-peach-azure,
+.theme-peach-azure .nav-sticky .brand-logo .material-icons {
   color: white;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .brand-logo .material-icons.theme-teal-orange,
+.theme-teal-orange .nav-sticky .brand-logo .material-icons {
+  color: #fff3e6;
   transition-property: color;
   transition-duration: 1.5s; }
 
 .nav-sticky .brand-logo .material-icons.theme-contrast,
 .theme-contrast .nav-sticky .brand-logo .material-icons {
-  color: #ff8800;
+  color: white;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .brand-logo .material-icons.theme-purple,
+.theme-purple .nav-sticky .brand-logo .material-icons {
+  color: white;
   transition-property: color;
   transition-duration: 1.5s; }
 
@@ -152,15 +271,27 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky .side-nav a.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky .side-nav a {
+.nav-sticky .side-nav a.theme-peach-azure,
+.theme-peach-azure .nav-sticky .side-nav a {
   color: black;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .side-nav a.theme-teal-orange,
+.theme-teal-orange .nav-sticky .side-nav a {
+  color: #091b20;
   transition-property: color;
   transition-duration: 1.5s; }
 
 .nav-sticky .side-nav a.theme-contrast,
 .theme-contrast .nav-sticky .side-nav a {
-  color: #121212;
+  color: #0d0d0d;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .side-nav a.theme-purple,
+.theme-purple .nav-sticky .side-nav a {
+  color: #1a141f;
   transition-property: color;
   transition-duration: 1.5s; }
 
@@ -174,18 +305,32 @@ body.theme-contrast,
     text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
     transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
-  .key-intro.theme-materialize-plain,
-  .theme-materialize-plain .key-intro {
+  .key-intro.theme-peach-azure,
+  .theme-peach-azure .key-intro {
     color: white;
     background: lightgrey;
     text-shadow: 0 0 10px rgba(204, 204, 204, 0.5);
     transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
+  .key-intro.theme-teal-orange,
+  .theme-teal-orange .key-intro {
+    color: #fff3e6;
+    background: #b0dce8;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+    transition-property: color, background, text-shadow;
+    transition-duration: 1.5s; }
   .key-intro.theme-contrast,
   .theme-contrast .key-intro {
-    color: #ff8800;
-    background: #82a3bf;
-    text-shadow: 0 0 3px gray;
+    color: white;
+    background: #ebe247;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+    transition-property: color, background, text-shadow;
+    transition-duration: 1.5s; }
+  .key-intro.theme-purple,
+  .theme-purple .key-intro {
+    color: white;
+    background: #debaf7;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
     transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
   .key-intro__title {
@@ -204,14 +349,24 @@ body.theme-contrast,
     color: #4a4a4a;
     transition-property: color;
     transition-duration: 1.5s; }
-  .articles article.theme-materialize-plain,
-  .theme-materialize-plain .articles article {
+  .articles article.theme-peach-azure,
+  .theme-peach-azure .articles article {
     color: black;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article.theme-teal-orange,
+  .theme-teal-orange .articles article {
+    color: #091b20;
     transition-property: color;
     transition-duration: 1.5s; }
   .articles article.theme-contrast,
   .theme-contrast .articles article {
-    color: #121212;
+    color: #0d0d0d;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article.theme-purple,
+  .theme-purple .articles article {
+    color: #1a141f;
     transition-property: color;
     transition-duration: 1.5s; }
   .articles article:nth-of-type(even).theme-bw,
@@ -219,13 +374,23 @@ body.theme-contrast,
     background: #f2f2f2;
     transition-property: background;
     transition-duration: 1.5s; }
-  .articles article:nth-of-type(even).theme-materialize-plain,
-  .theme-materialize-plain .articles article:nth-of-type(even) {
+  .articles article:nth-of-type(even).theme-peach-azure,
+  .theme-peach-azure .articles article:nth-of-type(even) {
+    background: #f2f2f2;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article:nth-of-type(even).theme-teal-orange,
+  .theme-teal-orange .articles article:nth-of-type(even) {
     background: #f2f2f2;
     transition-property: background;
     transition-duration: 1.5s; }
   .articles article:nth-of-type(even).theme-contrast,
   .theme-contrast .articles article:nth-of-type(even) {
+    background: #f7f4ba;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article:nth-of-type(even).theme-purple,
+  .theme-purple .articles article:nth-of-type(even) {
     background: #f2f2f2;
     transition-property: background;
     transition-duration: 1.5s; }
@@ -234,14 +399,24 @@ body.theme-contrast,
     color: black;
     transition-property: color;
     transition-duration: 1.5s; }
-  .articles article a.theme-materialize-plain,
-  .theme-materialize-plain .articles article a {
+  .articles article a.theme-peach-azure,
+  .theme-peach-azure .articles article a {
     color: #410c0c;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article a.theme-teal-orange,
+  .theme-teal-orange .articles article a {
+    color: #153c47;
     transition-property: color;
     transition-duration: 1.5s; }
   .articles article a.theme-contrast,
   .theme-contrast .articles article a {
-    color: #06233c;
+    color: #302e03;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article a.theme-purple,
+  .theme-purple .articles article a {
+    color: black;
     transition-property: color;
     transition-duration: 1.5s; }
 
@@ -261,14 +436,24 @@ body.theme-contrast,
     background: #a1a1a1;
     transition-property: background;
     transition-duration: 1.5s; }
-  .themify-tool__button.theme-materialize-plain,
-  .theme-materialize-plain .themify-tool__button {
+  .themify-tool__button.theme-peach-azure,
+  .theme-peach-azure .themify-tool__button {
     background: #27a599;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .themify-tool__button.theme-teal-orange,
+  .theme-teal-orange .themify-tool__button {
+    background: #ff8800;
     transition-property: background;
     transition-duration: 1.5s; }
   .themify-tool__button.theme-contrast,
   .theme-contrast .themify-tool__button {
-    background: #ff8800;
+    background: #f5ec3d;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .themify-tool__button.theme-purple,
+  .theme-purple .themify-tool__button {
+    background: #f28cd9;
     transition-property: background;
     transition-duration: 1.5s; }
 
@@ -278,15 +463,27 @@ body.theme-contrast,
   transition-property: background;
   transition-duration: 1.5s; }
 
-.themify-tool__sub-button.theme-materialize-plain,
-.theme-materialize-plain .themify-tool__sub-button {
+.themify-tool__sub-button.theme-peach-azure,
+.theme-peach-azure .themify-tool__sub-button {
   background: #e57171;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.themify-tool__sub-button.theme-teal-orange,
+.theme-teal-orange .themify-tool__sub-button {
+  background: #153c47;
   transition-property: background;
   transition-duration: 1.5s; }
 
 .themify-tool__sub-button.theme-contrast,
 .theme-contrast .themify-tool__sub-button {
-  background: #1474c8;
+  background: #0d0d0d;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.themify-tool__sub-button.theme-purple,
+.theme-purple .themify-tool__sub-button {
+  background: #35134e;
   transition-property: background;
   transition-duration: 1.5s; }
 
@@ -298,38 +495,66 @@ body.theme-contrast,
   transition-property: color, background;
   transition-duration: 1.5s; }
 
-.page-footer.theme-materialize-plain,
-.theme-materialize-plain .page-footer {
+.page-footer.theme-peach-azure,
+.theme-peach-azure .page-footer {
   color: white;
   background: #e57171;
   transition-property: color, background;
   transition-duration: 1.5s; }
 
+.page-footer.theme-teal-orange,
+.theme-teal-orange .page-footer {
+  color: #fff3e6;
+  background: #153c47;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
 .page-footer.theme-contrast,
 .theme-contrast .page-footer {
-  color: #ff8800;
-  background: #1474c8;
+  color: white;
+  background: #0d0d0d;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
+.page-footer.theme-purple,
+.theme-purple .page-footer {
+  color: white;
+  background: #35134e;
   transition-property: color, background;
   transition-duration: 1.5s; }
 
 .page-footer a.theme-bw,
 .theme-bw .page-footer a {
-  color: #cbc8c8;
+  color: #e4e2e2;
   text-shadow: 1px 1px 1px gray;
   transition-property: color, text-shadow;
   transition-duration: 1.5s; }
 
-.page-footer a.theme-materialize-plain,
-.theme-materialize-plain .page-footer a {
+.page-footer a.theme-peach-azure,
+.theme-peach-azure .page-footer a {
   color: #6eddd2;
+  text-shadow: 1px 1px 2px gray;
+  transition-property: color, text-shadow;
+  transition-duration: 1.5s; }
+
+.page-footer a.theme-teal-orange,
+.theme-teal-orange .page-footer a {
+  color: #fefaf5;
   text-shadow: 1px 1px 2px gray;
   transition-property: color, text-shadow;
   transition-duration: 1.5s; }
 
 .page-footer a.theme-contrast,
 .theme-contrast .page-footer a {
-  color: #fefaf5;
+  color: white;
   text-shadow: 1px 1px 2px gray;
+  transition-property: color, text-shadow;
+  transition-duration: 1.5s; }
+
+.page-footer a.theme-purple,
+.theme-purple .page-footer a {
+  color: #e6e4e7;
+  text-shadow: 1px 1px 1px gray;
   transition-property: color, text-shadow;
   transition-duration: 1.5s; }
 
@@ -339,15 +564,27 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 0.25s; }
 
-.page-footer a:hover.theme-materialize-plain,
-.theme-materialize-plain .page-footer a:hover {
+.page-footer a:hover.theme-peach-azure,
+.theme-peach-azure .page-footer a:hover {
   color: white;
+  transition-property: color;
+  transition-duration: 0.25s; }
+
+.page-footer a:hover.theme-teal-orange,
+.theme-teal-orange .page-footer a:hover {
+  color: #fff3e6;
   transition-property: color;
   transition-duration: 0.25s; }
 
 .page-footer a:hover.theme-contrast,
 .theme-contrast .page-footer a:hover {
-  color: #ff8800;
+  color: white;
+  transition-property: color;
+  transition-duration: 0.25s; }
+
+.page-footer a:hover.theme-purple,
+.theme-purple .page-footer a:hover {
+  color: white;
   transition-property: color;
   transition-duration: 0.25s; }
 
@@ -357,15 +594,27 @@ body.theme-contrast,
   transition-property: background;
   transition-duration: 1.5s; }
 
-.page-footer .btn.theme-materialize-plain,
-.theme-materialize-plain .page-footer .btn {
+.page-footer .btn.theme-peach-azure,
+.theme-peach-azure .page-footer .btn {
   background: #27a599;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.page-footer .btn.theme-teal-orange,
+.theme-teal-orange .page-footer .btn {
+  background: #ff8800;
   transition-property: background;
   transition-duration: 1.5s; }
 
 .page-footer .btn.theme-contrast,
 .theme-contrast .page-footer .btn {
-  background: #ff8800;
+  background: #f5ec3d;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.page-footer .btn.theme-purple,
+.theme-purple .page-footer .btn {
+  background: #f28cd9;
   transition-property: background;
   transition-duration: 1.5s; }
 

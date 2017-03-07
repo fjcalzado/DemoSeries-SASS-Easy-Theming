@@ -14,17 +14,16 @@
     <!-- Header section -->
     <!-- Jumbo Header -->
     <div class="header-jumbo">
+      <div class="header-jumbo__updater left">
+        <a class="btn-floating btn-large waves-effect tooltipped" data-position="right" data-tooltip="Refresh Triangles" href="javascript:void(0)" onclick="themifyHeaderJumbo()"><i class="large material-icons">loop</i></a>
+      </div>
       <div class="header-jumbo__canvas">
         <div class="header-jumbo__usable-area container">
-          <div class="header-jumbo__updater left">
-            <a class="btn btn-floating btn-large waves-effect" href="javascript:void(0)" onclick="themifyHeaderJumbo()"><i class="large material-icons">loop</i></a>
-          </div>
           <div class="header-jumbo__title">
               <h1>Themes.</h1>
               <h1>Made.</h1>
               <h1>Easy.</h1>
           </div>
-
         </div>
       </div>
     </div>
@@ -38,12 +37,12 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#id-key-intro">Intro</a></li>
                     <li><a href="#id-main-panel">Main</a></li>
-                    <li><a href="#id-secondary-panel-outtro">Outtro</a></li>
+                    <li><a href="#id-outtro">Footer</a></li>
                 </ul>
                 <ul class="side-nav" id="nav-mobile">
                     <li><a href="#id-key-intro">Intro</a></li>
                     <li><a href="#id-main-panel">Main</a></li>
-                    <li><a href="#id-secondary-panel-outtro">Outtro</a></li>
+                    <li><a href="#id-outtro">Footer</a></li>
                 </ul>
             </div>
         </div>
@@ -116,7 +115,8 @@
         </div>
 
         <!-- Secondary Panel Outtro -->
-        <div class="" id="id-secondary-panel-outtro">
+        <div class="" id="id-outtro">
+          <!-- TODO: Implementation pending -->
         </div>
 
     </main>
@@ -124,14 +124,15 @@
     <!-- Themify floating menu -->
     <div class="themify-tool">
         <div class="fixed-action-btn horizontal">
-            <a class="btn-floating btn-large waves-effect themify-tool__button">
-                <i class="large material-icons">mode_edit</i>
+            <a class="btn-floating btn-large waves-effect tooltipped themify-tool__button" data-position="top"  data-tooltip="Change Me!">
+                <i class="material-icons large">palette</i>
             </a>
             <ul>
-                <li><a class="btn-floating waves-effect themify-tool__sub-button" href="javascript:void(0)" onclick="themifyMe('bw')"><i class="material-icons">invert_colors</i></a></li>
-                <li><a class="btn-floating waves-effect themify-tool__sub-button" href="javascript:void(0)" onclick="themifyMe('materialize-plain')"><i class="material-icons">star</i></a></li>
-                <li><a class="btn-floating waves-effect themify-tool__sub-button" href="javascript:void(0)" onclick="themifyMe('contrast')"><i class="material-icons">brightness_medium</i></a></li>
-                <li><a class="btn-floating waves-effect themify-tool__sub-button"><i class="material-icons">https</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Black and White" href="javascript:void(0)" onclick="themifyMe('bw')"><i class="material-icons">invert_colors</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Peach and Azure" href="javascript:void(0)" onclick="themifyMe('peach-azure')"><i class="material-icons">filter_vintage</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Teal and Orange" href="javascript:void(0)" onclick="themifyMe('teal-orange')"><i class="material-icons">star</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="High Contrast" href="javascript:void(0)" onclick="themifyMe('contrast')"><i class="material-icons">brightness_medium</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Girly Purple" href="javascript:void(0)" onclick="themifyMe('purple')"><i class="material-icons">new_releases</i></a></li>
             </ul>
         </div>
     </div>
