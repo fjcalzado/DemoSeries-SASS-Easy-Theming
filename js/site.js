@@ -1,4 +1,4 @@
-// JQuery extension function to detect if a given node is 
+// JQuery extension function to detect if a given node is
 // currently viewed in the viewport.
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
@@ -16,8 +16,8 @@ $(document).ready(function() {
     // *** Side-nav initialization ***
     $(".button-collapse").sideNav();
 
-    // *** Header Jumbo 'canvas' intialization ***
-    themifyHeaderJumbo();
+    // *** Theme initialization with default***
+    themifyMe("bw");
 
     // Sticky nav-bar logic as offered by google.
     // ISSUE: It jumps! Not so fine crafted as expected :(
@@ -32,8 +32,8 @@ $(document).ready(function() {
     // });
 
     // *** Sticky Navbar Logic ***
-    var getNavbarOffset = function(){
-      return $(".nav-sticky").offset().top;
+    var getNavbarOffset = function() {
+        return $(".nav-sticky").offset().top;
     }
     var navbarInitialOffset = getNavbarOffset();
     var navbarHeight = $(".nav-sticky").height();
@@ -56,17 +56,15 @@ $(document).ready(function() {
 
     // *** Themify Tool Logic ***
     var themifyToolOnlyOnMain = false;
-    if(themifyToolOnlyOnMain)
-    {
+    if (themifyToolOnlyOnMain) {
         $(".themify-tool").hide();
     }
 
     // *** Themify tool checker function ***
     var checkThemifyTool = function() {
-        if(themifyToolOnlyOnMain)
-        {
+        if (themifyToolOnlyOnMain) {
             var currentScrollTop = $(window).scrollTop();
-            if (/*(currentScrollTop > (navbarInitialOffset / 3)) &&*/ !$("footer").isInViewport()) {
+            if ( /*(currentScrollTop > (navbarInitialOffset / 3)) &&*/ !$("footer").isInViewport()) {
                 $(".themify-tool").show("slow");
             } else {
                 $(".themify-tool").hide("slow");
@@ -81,44 +79,52 @@ $(document).ready(function() {
         checkThemifyTool();
     });
     $(window).resize(function() {
+        navbarInitialOffset = getNavbarOffset();
+        checkThemifyTool();
+
         // Lets wait a timeout for the resize to completely finish.
-        // This will make resizing feels lighter.
-        //clearTimeout(window.resizedFinished)
-        //window.resizedFinished = setTimeout(function() {
-            checkStickyNav();
-            checkThemifyTool();
-        //}, 100);
+        // This will make resizing feels lighter preventing heavy
+        // tasks to be done continuously while resizing.
+        clearTimeout(window.resizedFinished)
+        window.resizedFinished = setTimeout(function() {
+          themifyHeaderJumbo();
+        }, 300);
     });
 })
 
 // Themify tool apply function.
-var themifyMe = function(themeName){
-    
+var themifyMe = function(themeName) {
+
     // STEP 1: Find and replace all occurences of class "theme-<x>" where
-    // x is the name of the theme.  
-    $(document).find("[class*='theme-']").attr("class", function(i, cls){
+    // x is the name of the theme.
+    $(document).find("[class*='theme-']").attr("class", function(i, cls) {
         return cls.replace(/theme-(.*)/, "theme-" + themeName);
-    });  
+    });
 
     // STEP 2: Update header jumbo 'canvas'.
-    themifyHeaderJumbo();    
+    themifyHeaderJumbo();
 }
 
 // Helper method to update header jumbo background in canvas mode.
-var themifyHeaderJumbo = function(){
+var themifyHeaderJumbo = function() {
     // We are going to regenerate header jumbo canvas dinamically
-    // using the wonderful Trianglify JS library. This will only apply
-    // for those themes without a backgroud image in the jumbo header.
-    var themeColor = $(".header-jumbo").css("background-color");
+    // using the wonderful Trianglify JS library.
+    var secondaryColor = $(".header-jumbo").css("background-color");
+    var primaryColor = $(".header-jumbo").css("color");
     var hjHeight = $(".header-jumbo").height();
     var hjWidth = $(".header-jumbo").width();
-        
+
     var pattern = Trianglify({
         height: hjHeight,
         width: hjWidth,
-        cell_size: Math.random()*150 + 40,
-        x_colors: ["#FFFFFF", themeColor, "#000000"],
+        cell_size: Math.random() * 150 + 40,
+
+        x_colors: ["#FFFFFF", primaryColor, "#000000"],
+        y_colors: ["#FFFFFF", secondaryColor, "#000000"],
+
+        // x_colors: ["#FFFFFF", "#FFFFFF", secondaryColor, "#000000"],
+        // y_colors: [primaryColor, secondaryColor, "#000000"],
     });
     var patternUrl = "url('" + pattern.png() + "')";
-    $(".header-jumbo").css("background-image", patternUrl);
+    $(".header-jumbo__canvas").css("background-image", patternUrl);
 }
