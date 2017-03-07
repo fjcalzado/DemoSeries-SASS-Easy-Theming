@@ -1,9 +1,15 @@
 @import "init";
 @import "mixins";
 
-// General
+/*GENERAL*/
 body {
     @include themify(font-family, primary-font);
+}
+
+.material-tooltip {
+    .backdrop {
+        @include themify(background-color, secondary-color);
+    }
 }
 
 /*HEADER SECTION*/
@@ -36,11 +42,11 @@ body {
     }
 
     &__updater {
-      padding-top: 3vmin;
+        padding: 3vmin 0 0 3vmin;
 
-      .btn {
-          background-color: rgba(0, 0, 0, 0.1);
-      }
+        .btn-floating {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
     }
 }
 
@@ -61,7 +67,6 @@ body {
         }
     }
 }
-
 /*MAIN*/
 .key-intro {
     padding-top: 2rem;
