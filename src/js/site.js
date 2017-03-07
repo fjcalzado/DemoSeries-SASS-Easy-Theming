@@ -9,7 +9,8 @@ $.fn.isInViewport = function() {
 };
 
 $(document).ready(function() {
-    // Side-nav initialization
+
+    // *** Side-nav initialization ***
     $(".button-collapse").sideNav();
 
     // Sticky nav-bar logic as offered by google.
@@ -24,7 +25,7 @@ $(document).ready(function() {
     //   offset: 0
     // });
 
-    // Sticky nav-bar logic
+    // *** Sticky Navbar Logic ***
     var getNavbarOffset = function(){
       return $(".nav-sticky").offset().top;
     }
@@ -47,10 +48,14 @@ $(document).ready(function() {
         }
     }
 
-    // Themify button initialization
-    //$(".themify-tool").hide();
+    // *** Themify Tool Logic ***
+    var themifyToolOnlyOnMain = false;
+    if(themifyToolOnlyOnMain)
+    {
+        $(".themify-tool").hide();
+    }
 
-    // Themify button logic
+    // *** Themify tool checker function ***
     var themifyToolChecker = function() {
         var currentScrollTop = $(window).scrollTop();
         if (/*(currentScrollTop > (navbarInitialOffset / 3)) &&*/ !$("footer").isInViewport()) {
@@ -63,17 +68,48 @@ $(document).ready(function() {
     // Bind checkers to Scroll and Resize
     $(window).scroll(function() {
         stickyNavChecker();
-        //themifyToolChecker();
+        if(themifyToolOnlyOnMain)
+        {
+            themifyToolChecker();
+        }
     });
     $(window).resize(function() {
         navbarInitialOffset = getNavbarOffset();
         stickyNavChecker();
-        //themifyToolChecker();
+        if(themifyToolOnlyOnMain)
+        {
+            themifyToolChecker();
+        }
     });
 })
 
+// *** Themify tool apply function ***
 var themifyMe = function(themeName){
-  $(document).find("[class*='theme-']").attr("class", function(i, cls){
-    return cls.replace(/theme-(.*)/, "theme-" + themeName);
-  });
+
+    // STEP 2: We are going to regenerate header jumbo background dinamically
+    // using the wonderful Trianglify JS library.
+    // Only applies for those themes without an specific primary image.
+    // var bkgImg = $(".header-jumbo").css("background-image");
+    // if( bkgImg == "none")
+    // {
+        var themifyJumboHeader = function(){
+            var hjHeight = $(".header-jumbo").height();
+            var hjWidth = $(".header-jumbo").width();
+            var pattern = Trianglify({
+                height: hjHeight,
+                width: hjWidth,
+                cell_size: 40
+            });
+            var patternUrl = "url('" + pattern.png() + "')";
+            $(".header-jumbo").css("background-image", patternUrl);
+        }();    
+    // }   
+
+    // STEP 1: Find and replace all occurences of class "theme-<x>" where
+    // x is the name of the theme.  
+    $(document).find("[class*='theme-']").attr("class", function(i, cls){
+        return cls.replace(/theme-(.*)/, "theme-" + themeName);
+    });     
+
+    
 }
