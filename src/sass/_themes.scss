@@ -1,27 +1,10 @@
 // Global Themes variables.
 $theme-transition-duration: 1.5s;
-$img-root-folder: "../images";
 
 // Themes definition.
 $themeCollection: (
-  "materialize-plain": (
-    "primary-font": Open Sans,
-    "primary-image": "",
-    "primary-color": hsl(0, 69%, 67%),
-    "secondary-color": hsl(174, 62%, 40%),
-    "text-color-light": white,
-    "text-color-dark": black,
-    "link-color-light": hsl(174, 62%, 65%),
-    "link-color-dark": hsl(0, 69%, 15%),
-    "grey-tone": lightgrey,
-    "grey-tone-subtle": hsl(0, 0%, 95%),
-    "shadow-light": 1px 1px 2px hsl(0, 0%, 50%),
-    "shadow-dark": 0 2px 2px hsl(0, 0%, 50%),
-    "shadow-difuse": 0 0 3px hsl(0, 0%, 50%),
-  ),
-  "bw": (
+"bw": (
     "primary-font": Raleway,
-    "primary-image": url(#{$img-root-folder}/theme-bw.jpg),
     "primary-color": hsl(0, 0%, 19%),
     "secondary-color": hsl(240, 0%, 63%),
     "text-color-light": white,
@@ -34,18 +17,33 @@ $themeCollection: (
     "shadow-dark": 0 2px 6px hsl(0, 0%, 25%),
     "shadow-difuse": 0 0 10px hsla(0, 0%, 50%, 0.3),
   ),
-  "contrast": (
-    "primary-image": "",
-    "primary-color": hsl(208, 82%, 43%),
-    "secondary-color": hsl(32, 100%, 50%),
-    "text-color-light": hsl(32, 100%, 50%),
-    "text-color-dark": hsl(0, 0%, 7%),
-    "link-color-light": hsl(30, 90%, 98%),
-    "link-color-dark": hsl(208, 82%, 13%),
-    "grey-tone": hsl(208, 32%, 63%),
-    "grey-tone-subtle": hsl(0, 0%, 95%),
-    "shadow-light": 1px 1px 2px gray,
-    "shadow-dark": 0 2px 6px hsl(0, 0%, 25%),
-    "shadow-difuse": 0 0 3px hsl(0, 0%, 50%),
+    "materialize-plain": (
+      "primary-font": Open Sans,
+      "primary-image": "",
+      "primary-color": hsl(0, 69%, 67%),
+      "secondary-color": hsl(174, 62%, 40%),
+      "text-color-light": white,
+      "text-color-dark": black,
+      "link-color-light": hsl(174, 62%, 65%),
+      "link-color-dark": hsl(0, 69%, 15%),
+      "grey-tone": lightgrey,
+      "grey-tone-subtle": hsl(0, 0%, 95%),
+      "shadow-light": 1px 1px 2px hsl(0, 0%, 50%),
+      "shadow-dark": 0 2px 2px hsl(0, 0%, 50%),
+      "shadow-difuse": 0 0 10px hsla(0, 0%, 80%, 0.5),
+  ),
+    "contrast": (
+      "primary-image": "",
+      "primary-color": hsl(208, 82%, 43%),
+      "secondary-color": hsl(32, 100%, 50%),
+      "text-color-light": hsl(32, 100%, 50%),
+      "text-color-dark": hsl(0, 0%, 7%),
+      "link-color-light": hsl(30, 90%, 98%),
+      "link-color-dark": hsl(208, 82%, 13%),
+      "grey-tone": hsl(208, 32%, 63%),
+      "grey-tone-subtle": hsl(0, 0%, 95%),
+      "shadow-light": 1px 1px 2px gray,
+      "shadow-dark": 0 2px 6px hsl(0, 0%, 25%),
+      "shadow-difuse": 0 0 3px hsl(0, 0%, 50%),
   )
 ) !default;

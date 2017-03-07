@@ -2,15 +2,15 @@
 @import "https://fonts.googleapis.com/css?family=Raleway:0,800";
 @import "https://fonts.googleapis.com/css?family=Share:0,400";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:0,800";
-body.theme-materialize-plain,
-.theme-materialize-plain body {
-  font-family: Open Sans;
-  transition-property: font-family;
-  transition-duration: 1.5s; }
-
 body.theme-bw,
 .theme-bw body {
   font-family: Raleway;
+  transition-property: font-family;
+  transition-duration: 1.5s; }
+
+body.theme-materialize-plain,
+.theme-materialize-plain body {
+  font-family: Open Sans;
   transition-property: font-family;
   transition-duration: 1.5s; }
 
@@ -20,61 +20,86 @@ body.theme-contrast,
   transition-duration: 1.5s; }
 
 /*HEADER SECTION*/
-.header-jumbo {
+.header-jumbo.theme-bw,
+.theme-bw .header-jumbo {
+  background-color: #a1a1a1;
+  color: #303030;
+  transition-property: background-color, color;
+  transition-duration: 0s; }
+
+.header-jumbo.theme-materialize-plain,
+.theme-materialize-plain .header-jumbo {
+  background-color: #27a599;
+  color: #e57171;
+  transition-property: background-color, color;
+  transition-duration: 0s; }
+
+.header-jumbo.theme-contrast,
+.theme-contrast .header-jumbo {
+  background-color: #ff8800;
+  color: #1474c8;
+  transition-property: background-color, color;
+  transition-duration: 0s; }
+
+.header-jumbo__canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
-  .header-jumbo.theme-materialize-plain,
-  .theme-materialize-plain .header-jumbo {
-    background-color: #27a599;
-    transition-property: background-image, background-color;
+  .header-jumbo__canvas.theme-bw,
+  .theme-bw .header-jumbo__canvas {
+    transition-property: background;
     transition-duration: 1.5s; }
-  .header-jumbo.theme-bw,
-  .theme-bw .header-jumbo {
-    background-color: #a1a1a1;
-    transition-property: background-image, background-color;
+  .header-jumbo__canvas.theme-materialize-plain,
+  .theme-materialize-plain .header-jumbo__canvas {
+    transition-property: background;
     transition-duration: 1.5s; }
-  .header-jumbo.theme-contrast,
-  .theme-contrast .header-jumbo {
-    background-color: #ff8800;
-    transition-property: background-image, background-color;
+  .header-jumbo__canvas.theme-contrast,
+  .theme-contrast .header-jumbo__canvas {
+    transition-property: background;
     transition-duration: 1.5s; }
-  .header-jumbo__title {
-    padding: 5vh 0; }
-    .header-jumbo__title h1 {
-      text-align: right;
-      font-weight: bolder;
-      font-size: 17vmin;
-      margin: 0; }
-      .header-jumbo__title h1.theme-materialize-plain,
-      .theme-materialize-plain .header-jumbo__title h1 {
-        color: white;
-        font-family: Open Sans;
-        transition-property: color, font-family;
-        transition-duration: 1.5s; }
-      .header-jumbo__title h1.theme-bw,
-      .theme-bw .header-jumbo__title h1 {
-        color: white;
-        font-family: Raleway;
-        transition-property: color, font-family;
-        transition-duration: 1.5s; }
-      .header-jumbo__title h1.theme-contrast,
-      .theme-contrast .header-jumbo__title h1 {
-        color: #ff8800;
-        transition-property: color, font-family;
-        transition-duration: 1.5s; }
 
-.nav-sticky.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky {
-  background: #e57171;
-  box-shadow: 0 2px 2px gray;
-  transition-property: background, box-shadow;
-  transition-duration: 1.5s; }
+.header-jumbo__usable-area {
+  padding: 5vh 0; }
+
+.header-jumbo__title h1 {
+  text-align: right;
+  font-weight: bolder;
+  font-size: 17vmin;
+  margin: 0; }
+  .header-jumbo__title h1.theme-bw,
+  .theme-bw .header-jumbo__title h1 {
+    color: white;
+    font-family: Raleway;
+    transition-property: color, font-family;
+    transition-duration: 1.5s; }
+  .header-jumbo__title h1.theme-materialize-plain,
+  .theme-materialize-plain .header-jumbo__title h1 {
+    color: white;
+    font-family: Open Sans;
+    transition-property: color, font-family;
+    transition-duration: 1.5s; }
+  .header-jumbo__title h1.theme-contrast,
+  .theme-contrast .header-jumbo__title h1 {
+    color: #ff8800;
+    transition-property: color, font-family;
+    transition-duration: 1.5s; }
+
+.header-jumbo__updater {
+  padding-top: 3vmin; }
+  .header-jumbo__updater .btn {
+    background-color: rgba(0, 0, 0, 0.1); }
 
 .nav-sticky.theme-bw,
 .theme-bw .nav-sticky {
   background: #303030;
   box-shadow: 0 2px 6px #404040;
+  transition-property: background, box-shadow;
+  transition-duration: 1.5s; }
+
+.nav-sticky.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky {
+  background: #e57171;
+  box-shadow: 0 2px 2px gray;
   transition-property: background, box-shadow;
   transition-duration: 1.5s; }
 
@@ -85,14 +110,14 @@ body.theme-contrast,
   transition-property: background, box-shadow;
   transition-duration: 1.5s; }
 
-.nav-sticky a.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky a {
+.nav-sticky a.theme-bw,
+.theme-bw .nav-sticky a {
   color: white;
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky a.theme-bw,
-.theme-bw .nav-sticky a {
+.nav-sticky a.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky a {
   color: white;
   transition-property: color;
   transition-duration: 1.5s; }
@@ -103,14 +128,14 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky .brand-logo .material-icons.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky .brand-logo .material-icons {
+.nav-sticky .brand-logo .material-icons.theme-bw,
+.theme-bw .nav-sticky .brand-logo .material-icons {
   color: white;
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky .brand-logo .material-icons.theme-bw,
-.theme-bw .nav-sticky .brand-logo .material-icons {
+.nav-sticky .brand-logo .material-icons.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky .brand-logo .material-icons {
   color: white;
   transition-property: color;
   transition-duration: 1.5s; }
@@ -121,15 +146,15 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 1.5s; }
 
-.nav-sticky .side-nav a.theme-materialize-plain,
-.theme-materialize-plain .nav-sticky .side-nav a {
-  color: black;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
 .nav-sticky .side-nav a.theme-bw,
 .theme-bw .nav-sticky .side-nav a {
   color: #4a4a4a;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .side-nav a.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky .side-nav a {
+  color: black;
   transition-property: color;
   transition-duration: 1.5s; }
 
@@ -142,18 +167,18 @@ body.theme-contrast,
 /*MAIN*/
 .key-intro {
   padding-top: 2rem; }
-  .key-intro.theme-materialize-plain,
-  .theme-materialize-plain .key-intro {
-    color: white;
-    background: lightgrey;
-    text-shadow: 0 0 3px gray;
-    transition-property: color, background, text-shadow;
-    transition-duration: 1.5s; }
   .key-intro.theme-bw,
   .theme-bw .key-intro {
     color: white;
     background: lightgrey;
     text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+    transition-property: color, background, text-shadow;
+    transition-duration: 1.5s; }
+  .key-intro.theme-materialize-plain,
+  .theme-materialize-plain .key-intro {
+    color: white;
+    background: lightgrey;
+    text-shadow: 0 0 10px rgba(204, 204, 204, 0.5);
     transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
   .key-intro.theme-contrast,
@@ -174,14 +199,14 @@ body.theme-contrast,
 
 .articles article {
   padding: 4rem 0 2rem; }
-  .articles article.theme-materialize-plain,
-  .theme-materialize-plain .articles article {
-    color: black;
-    transition-property: color;
-    transition-duration: 1.5s; }
   .articles article.theme-bw,
   .theme-bw .articles article {
     color: #4a4a4a;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article.theme-materialize-plain,
+  .theme-materialize-plain .articles article {
+    color: black;
     transition-property: color;
     transition-duration: 1.5s; }
   .articles article.theme-contrast,
@@ -189,14 +214,29 @@ body.theme-contrast,
     color: #121212;
     transition-property: color;
     transition-duration: 1.5s; }
-  .articles article a.theme-materialize-plain,
-  .theme-materialize-plain .articles article a {
-    color: #410c0c;
-    transition-property: color;
+  .articles article:nth-of-type(even).theme-bw,
+  .theme-bw .articles article:nth-of-type(even) {
+    background: #f2f2f2;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article:nth-of-type(even).theme-materialize-plain,
+  .theme-materialize-plain .articles article:nth-of-type(even) {
+    background: #f2f2f2;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article:nth-of-type(even).theme-contrast,
+  .theme-contrast .articles article:nth-of-type(even) {
+    background: #f2f2f2;
+    transition-property: background;
     transition-duration: 1.5s; }
   .articles article a.theme-bw,
   .theme-bw .articles article a {
     color: black;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article a.theme-materialize-plain,
+  .theme-materialize-plain .articles article a {
+    color: #410c0c;
     transition-property: color;
     transition-duration: 1.5s; }
   .articles article a.theme-contrast,
@@ -216,14 +256,14 @@ body.theme-contrast,
   animation-name: highlight-expand;
   animation-duration: 2s;
   animation-iteration-count: infinite; }
-  .themify-tool__button.theme-materialize-plain,
-  .theme-materialize-plain .themify-tool__button {
-    background: #27a599;
-    transition-property: background;
-    transition-duration: 1.5s; }
   .themify-tool__button.theme-bw,
   .theme-bw .themify-tool__button {
     background: #a1a1a1;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .themify-tool__button.theme-materialize-plain,
+  .theme-materialize-plain .themify-tool__button {
+    background: #27a599;
     transition-property: background;
     transition-duration: 1.5s; }
   .themify-tool__button.theme-contrast,
@@ -232,15 +272,15 @@ body.theme-contrast,
     transition-property: background;
     transition-duration: 1.5s; }
 
-.themify-tool__sub-button.theme-materialize-plain,
-.theme-materialize-plain .themify-tool__sub-button {
-  background: #e57171;
-  transition-property: background;
-  transition-duration: 1.5s; }
-
 .themify-tool__sub-button.theme-bw,
 .theme-bw .themify-tool__sub-button {
   background: #303030;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.themify-tool__sub-button.theme-materialize-plain,
+.theme-materialize-plain .themify-tool__sub-button {
+  background: #e57171;
   transition-property: background;
   transition-duration: 1.5s; }
 
@@ -251,17 +291,17 @@ body.theme-contrast,
   transition-duration: 1.5s; }
 
 /*Footer*/
-.page-footer.theme-materialize-plain,
-.theme-materialize-plain .page-footer {
-  color: white;
-  background: #e57171;
-  transition-property: color, background;
-  transition-duration: 1.5s; }
-
 .page-footer.theme-bw,
 .theme-bw .page-footer {
   color: white;
   background: #303030;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
+.page-footer.theme-materialize-plain,
+.theme-materialize-plain .page-footer {
+  color: white;
+  background: #e57171;
   transition-property: color, background;
   transition-duration: 1.5s; }
 
@@ -272,17 +312,17 @@ body.theme-contrast,
   transition-property: color, background;
   transition-duration: 1.5s; }
 
-.page-footer a.theme-materialize-plain,
-.theme-materialize-plain .page-footer a {
-  color: #6eddd2;
-  text-shadow: 1px 1px 2px gray;
-  transition-property: color, text-shadow;
-  transition-duration: 1.5s; }
-
 .page-footer a.theme-bw,
 .theme-bw .page-footer a {
   color: #cbc8c8;
   text-shadow: 1px 1px 1px gray;
+  transition-property: color, text-shadow;
+  transition-duration: 1.5s; }
+
+.page-footer a.theme-materialize-plain,
+.theme-materialize-plain .page-footer a {
+  color: #6eddd2;
+  text-shadow: 1px 1px 2px gray;
   transition-property: color, text-shadow;
   transition-duration: 1.5s; }
 
@@ -293,14 +333,14 @@ body.theme-contrast,
   transition-property: color, text-shadow;
   transition-duration: 1.5s; }
 
-.page-footer a:hover.theme-materialize-plain,
-.theme-materialize-plain .page-footer a:hover {
+.page-footer a:hover.theme-bw,
+.theme-bw .page-footer a:hover {
   color: white;
   transition-property: color;
   transition-duration: 0.25s; }
 
-.page-footer a:hover.theme-bw,
-.theme-bw .page-footer a:hover {
+.page-footer a:hover.theme-materialize-plain,
+.theme-materialize-plain .page-footer a:hover {
   color: white;
   transition-property: color;
   transition-duration: 0.25s; }
@@ -311,15 +351,15 @@ body.theme-contrast,
   transition-property: color;
   transition-duration: 0.25s; }
 
-.page-footer .btn.theme-materialize-plain,
-.theme-materialize-plain .page-footer .btn {
-  background: #27a599;
-  transition-property: background;
-  transition-duration: 1.5s; }
-
 .page-footer .btn.theme-bw,
 .theme-bw .page-footer .btn {
   background: #a1a1a1;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.page-footer .btn.theme-materialize-plain,
+.theme-materialize-plain .page-footer .btn {
+  background: #27a599;
   transition-property: background;
   transition-duration: 1.5s; }
 

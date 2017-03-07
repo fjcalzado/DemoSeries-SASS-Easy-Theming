@@ -2,20 +2,30 @@
 @import "mixins";
 
 // General
-body{
-  @include themify(font-family, primary-font);
+body {
+    @include themify(font-family, primary-font);
 }
 
 /*HEADER SECTION*/
 .header-jumbo {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-    @include themify((background-image, background-color), ("", secondary-color));
+    // Warning: do not transitionate background-color as it must be computed and retrieved
+    // by JS method 'themifyHeaderJumbo'
+    @include themify((background-color, color), (secondary-color, primary-color), 0s);
+
+    &__canvas {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        // This is just here to add transition duration to the background.
+        // Background is gonna be changed dinamically by JS.
+        @include themify(background, "");
+    }
+
+    &__usable-area {
+        padding: 5vh 0;
+    }
 
     &__title {
-        padding: 5vh 0;
-
         h1 {
             text-align: right;
             font-weight: bolder;
@@ -23,7 +33,15 @@ body{
             margin: 0;
             @include themify((color, font-family), (text-color-light, primary-font));
         }
-    };
+    }
+
+    &__updater {
+      padding-top: 3vmin;
+
+      .btn {
+          background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
 }
 
 .nav-sticky {
@@ -39,11 +57,10 @@ body{
 
     .side-nav {
         a {
-            @include themify(color, text-color-dark);                
-        }        
+            @include themify(color, text-color-dark);
+        }
     }
 }
-
 
 /*MAIN*/
 .key-intro {
@@ -73,7 +90,7 @@ body{
         @include themify(color, text-color-dark);
 
         &:nth-of-type(even) {
-          @include themify(background, grey-tone-subtle);
+            @include themify(background, grey-tone-subtle);
         }
 
         a {
@@ -107,10 +124,11 @@ body{
 /*Footer*/
 .page-footer {
     @include themify((color, background), (text-color-light, primary-color));
+
     a {
         @include themify((color, text-shadow), (link-color-light, shadow-light));
 
-        &:hover{
+        &:hover {
             @include themify(color, text-color-light, 0.25s);
         }
     }
