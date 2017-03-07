@@ -110,7 +110,6 @@ var themifyHeaderJumbo = function(){
     // using the wonderful Trianglify JS library. This will only apply
     // for those themes without a backgroud image in the jumbo header.
     var themeColor = $(".header-jumbo").css("background-color");
-    var color = new Color()
     var hjHeight = $(".header-jumbo").height();
     var hjWidth = $(".header-jumbo").width();
         
@@ -118,7 +117,7 @@ var themifyHeaderJumbo = function(){
         height: hjHeight,
         width: hjWidth,
         cell_size: Math.random()*150 + 40,
-        x_colors: themeColor
+        x_colors: ["#FFFFFF", themeColor, "#000000"],
     });
     var patternUrl = "url('" + pattern.png() + "')";
     $(".header-jumbo").css("background-image", patternUrl);
