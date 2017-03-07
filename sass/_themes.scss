@@ -6,7 +6,7 @@ $img-root-folder: "../images";
 $themeCollection: (
   "materialize-plain": (
     "primary-font": Open Sans,
-    "primary-image": url(#{$img-root-folder}/theme-materialize.jpg),
+    "primary-image": "",
     "primary-color": hsl(0, 69%, 67%),
     "secondary-color": hsl(174, 62%, 40%),
     "text-color-light": white,
@@ -33,7 +33,7 @@ $themeCollection: (
     "shadow-difuse": 0 0 10px hsla(0, 0%, 50%, 0.3),
   ),
   "contrast": (
-    "primary-image": url(#{$img-root-folder}/theme-bw.jpg),
+    "primary-image": "",
     "primary-color": hsl(208, 82%, 43%),
     "secondary-color": hsl(32, 100%, 50%),
     "text-color-light": hsl(32, 100%, 50%),

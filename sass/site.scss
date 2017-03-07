@@ -11,7 +11,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    @include themify(background-image, primary-image);
+    @include themify((background-image, background-color), (primary-image, secondary-color));
 
     &__title {
         padding: 5vh 0;

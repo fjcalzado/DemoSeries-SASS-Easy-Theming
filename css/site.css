@@ -26,18 +26,21 @@ body.theme-contrast,
   background-position: 50% 50%; }
   .header-jumbo.theme-materialize-plain,
   .theme-materialize-plain .header-jumbo {
-    background-image: url(../images/theme-materialize.jpg);
-    transition-property: background-image;
+    background-image: "";
+    background-color: #27a599;
+    transition-property: background-image, background-color;
     transition-duration: 1.5s; }
   .header-jumbo.theme-bw,
   .theme-bw .header-jumbo {
     background-image: url(../images/theme-bw.jpg);
-    transition-property: background-image;
+    background-color: #a1a1a1;
+    transition-property: background-image, background-color;
     transition-duration: 1.5s; }
   .header-jumbo.theme-contrast,
   .theme-contrast .header-jumbo {
-    background-image: url(../images/theme-bw.jpg);
-    transition-property: background-image;
+    background-image: "";
+    background-color: #ff8800;
+    transition-property: background-image, background-color;
     transition-duration: 1.5s; }
   .header-jumbo__title {
     padding: 5vh 0; }
