@@ -26,19 +26,16 @@ body.theme-contrast,
   background-position: 50% 50%; }
   .header-jumbo.theme-materialize-plain,
   .theme-materialize-plain .header-jumbo {
-    background-image: "";
     background-color: #27a599;
     transition-property: background-image, background-color;
     transition-duration: 1.5s; }
   .header-jumbo.theme-bw,
   .theme-bw .header-jumbo {
-    background-image: url(../images/theme-bw.jpg);
     background-color: #a1a1a1;
     transition-property: background-image, background-color;
     transition-duration: 1.5s; }
   .header-jumbo.theme-contrast,
   .theme-contrast .header-jumbo {
-    background-image: "";
     background-color: #ff8800;
     transition-property: background-image, background-color;
     transition-duration: 1.5s; }
@@ -121,6 +118,24 @@ body.theme-contrast,
 .nav-sticky .brand-logo .material-icons.theme-contrast,
 .theme-contrast .nav-sticky .brand-logo .material-icons {
   color: #ff8800;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .side-nav a.theme-materialize-plain,
+.theme-materialize-plain .nav-sticky .side-nav a {
+  color: black;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .side-nav a.theme-bw,
+.theme-bw .nav-sticky .side-nav a {
+  color: #4a4a4a;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.nav-sticky .side-nav a.theme-contrast,
+.theme-contrast .nav-sticky .side-nav a {
+  color: #121212;
   transition-property: color;
   transition-duration: 1.5s; }
 

@@ -1,3 +1,5 @@
+// JQuery extension function to detect if a given node is 
+// currently viewed in the viewport.
 $.fn.isInViewport = function() {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
@@ -8,10 +10,14 @@ $.fn.isInViewport = function() {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+// Document Initialization.
 $(document).ready(function() {
 
     // *** Side-nav initialization ***
     $(".button-collapse").sideNav();
+
+    // *** Header Jumbo 'canvas' intialization ***
+    themifyHeaderJumbo();
 
     // Sticky nav-bar logic as offered by google.
     // ISSUE: It jumps! Not so fine crafted as expected :(
@@ -31,7 +37,7 @@ $(document).ready(function() {
     }
     var navbarInitialOffset = getNavbarOffset();
     var navbarHeight = $(".nav-sticky").height();
-    var stickyNavChecker = function() {
+    var checkStickyNav = function() {
         var currentScrollTop = $(window).scrollTop();
         if (currentScrollTop > navbarInitialOffset) {
             // Take navbar out from layout to fixed position
@@ -56,60 +62,64 @@ $(document).ready(function() {
     }
 
     // *** Themify tool checker function ***
-    var themifyToolChecker = function() {
-        var currentScrollTop = $(window).scrollTop();
-        if (/*(currentScrollTop > (navbarInitialOffset / 3)) &&*/ !$("footer").isInViewport()) {
-            $(".themify-tool").show("slow");
-        } else {
-            $(".themify-tool").hide("slow");
+    var checkThemifyTool = function() {
+        if(themifyToolOnlyOnMain)
+        {
+            var currentScrollTop = $(window).scrollTop();
+            if (/*(currentScrollTop > (navbarInitialOffset / 3)) &&*/ !$("footer").isInViewport()) {
+                $(".themify-tool").show("slow");
+            } else {
+                $(".themify-tool").hide("slow");
+            }
         }
+
     }
 
     // Bind checkers to Scroll and Resize
     $(window).scroll(function() {
-        stickyNavChecker();
-        if(themifyToolOnlyOnMain)
-        {
-            themifyToolChecker();
-        }
+        checkStickyNav();
+        checkThemifyTool();
     });
     $(window).resize(function() {
-        navbarInitialOffset = getNavbarOffset();
-        stickyNavChecker();
-        if(themifyToolOnlyOnMain)
-        {
-            themifyToolChecker();
-        }
+        // Lets wait a timeout for the resize to completely finish.
+        // This will make resizing feels lighter.
+        //clearTimeout(window.resizedFinished)
+        //window.resizedFinished = setTimeout(function() {
+            checkStickyNav();
+            checkThemifyTool();
+        //}, 100);
     });
 })
 
-// *** Themify tool apply function ***
+// Themify tool apply function.
 var themifyMe = function(themeName){
-
-    // STEP 2: We are going to regenerate header jumbo background dinamically
-    // using the wonderful Trianglify JS library.
-    // Only applies for those themes without an specific primary image.
-    // var bkgImg = $(".header-jumbo").css("background-image");
-    // if( bkgImg == "none")
-    // {
-        var themifyJumboHeader = function(){
-            var hjHeight = $(".header-jumbo").height();
-            var hjWidth = $(".header-jumbo").width();
-            var pattern = Trianglify({
-                height: hjHeight,
-                width: hjWidth,
-                cell_size: 40
-            });
-            var patternUrl = "url('" + pattern.png() + "')";
-            $(".header-jumbo").css("background-image", patternUrl);
-        }();    
-    // }   
-
+    
     // STEP 1: Find and replace all occurences of class "theme-<x>" where
     // x is the name of the theme.  
     $(document).find("[class*='theme-']").attr("class", function(i, cls){
         return cls.replace(/theme-(.*)/, "theme-" + themeName);
-    });     
+    });  
 
-    
+    // STEP 2: Update header jumbo 'canvas'.
+    themifyHeaderJumbo();    
+}
+
+// Helper method to update header jumbo background in canvas mode.
+var themifyHeaderJumbo = function(){
+    // We are going to regenerate header jumbo canvas dinamically
+    // using the wonderful Trianglify JS library. This will only apply
+    // for those themes without a backgroud image in the jumbo header.
+    var themeColor = $(".header-jumbo").css("background-color");
+    var color = new Color()
+    var hjHeight = $(".header-jumbo").height();
+    var hjWidth = $(".header-jumbo").width();
+        
+    var pattern = Trianglify({
+        height: hjHeight,
+        width: hjWidth,
+        cell_size: Math.random()*150 + 40,
+        x_colors: themeColor
+    });
+    var patternUrl = "url('" + pattern.png() + "')";
+    $(".header-jumbo").css("background-image", patternUrl);
 }
