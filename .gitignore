@@ -5,3 +5,4 @@ typings/
 *.orig
 .idea/
 compile_css
+.vscode/settings.json
