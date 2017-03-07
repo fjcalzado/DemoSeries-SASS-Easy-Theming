@@ -64,6 +64,10 @@ body{
         padding: 4rem 0 2rem;
         @include themify(color, text-color-dark);
 
+        &:nth-of-type(even) {
+          @include themify(background, grey-tone-subtle);
+        }
+
         a {
             @include themify(color, link-color-dark);
         }
