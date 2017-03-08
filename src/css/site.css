@@ -5,35 +5,33 @@
 @import "https://fonts.googleapis.com/css?family=Roboto+Mono:0,600,800";
 @import "https://fonts.googleapis.com/css?family=Montserrat:0,600,800";
 /*GENERAL*/
-body.theme-bw,
-.theme-bw body {
-  font-family: Raleway;
-  transition-property: font-family;
-  transition-duration: 1.5s; }
-
-body.theme-peach-azure,
-.theme-peach-azure body {
-  font-family: Open Sans;
-  transition-property: font-family;
-  transition-duration: 1.5s; }
-
-body.theme-teal-orange,
-.theme-teal-orange body {
-  font-family: Ubuntu;
-  transition-property: font-family;
-  transition-duration: 1.5s; }
-
-body.theme-contrast,
-.theme-contrast body {
-  font-family: Roboto Mono;
-  transition-property: font-family;
-  transition-duration: 1.5s; }
-
-body.theme-purple,
-.theme-purple body {
-  font-family: Montserrat;
-  transition-property: font-family;
-  transition-duration: 1.5s; }
+body {
+  background-color: white; }
+  body.theme-bw,
+  .theme-bw body {
+    font-family: Raleway;
+    transition-property: font-family;
+    transition-duration: 1.5s; }
+  body.theme-peach-azure,
+  .theme-peach-azure body {
+    font-family: Open Sans;
+    transition-property: font-family;
+    transition-duration: 1.5s; }
+  body.theme-teal-orange,
+  .theme-teal-orange body {
+    font-family: Ubuntu;
+    transition-property: font-family;
+    transition-duration: 1.5s; }
+  body.theme-contrast,
+  .theme-contrast body {
+    font-family: Roboto Mono;
+    transition-property: font-family;
+    transition-duration: 1.5s; }
+  body.theme-purple,
+  .theme-purple body {
+    font-family: Montserrat;
+    transition-property: font-family;
+    transition-duration: 1.5s; }
 
 strong {
   font-weight: 600; }
@@ -295,7 +293,7 @@ strong {
   .theme-peach-azure .key-intro {
     color: white;
     background: lightgrey;
-    text-shadow: 0 0 10px rgba(204, 204, 204, 0.5);
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
     transition-property: color, background, text-shadow;
     transition-duration: 1.5s; }
   .key-intro.theme-teal-orange,
@@ -353,32 +351,42 @@ strong {
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-bw,
-    .theme-bw .key-intro__item .modal, .key-intro__item .modal a.theme-bw,
-    .theme-bw .key-intro__item .modal a {
+    .theme-bw .key-intro__item .modal,
+    .key-intro__item .modal a.theme-bw,
+    .theme-bw
+    .key-intro__item .modal a {
       color: #4a4a4a;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-peach-azure,
-    .theme-peach-azure .key-intro__item .modal, .key-intro__item .modal a.theme-peach-azure,
-    .theme-peach-azure .key-intro__item .modal a {
+    .theme-peach-azure .key-intro__item .modal,
+    .key-intro__item .modal a.theme-peach-azure,
+    .theme-peach-azure
+    .key-intro__item .modal a {
       color: black;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-teal-orange,
-    .theme-teal-orange .key-intro__item .modal, .key-intro__item .modal a.theme-teal-orange,
-    .theme-teal-orange .key-intro__item .modal a {
+    .theme-teal-orange .key-intro__item .modal,
+    .key-intro__item .modal a.theme-teal-orange,
+    .theme-teal-orange
+    .key-intro__item .modal a {
       color: #091b20;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-contrast,
-    .theme-contrast .key-intro__item .modal, .key-intro__item .modal a.theme-contrast,
-    .theme-contrast .key-intro__item .modal a {
+    .theme-contrast .key-intro__item .modal,
+    .key-intro__item .modal a.theme-contrast,
+    .theme-contrast
+    .key-intro__item .modal a {
       color: #0d0d0d;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-purple,
-    .theme-purple .key-intro__item .modal, .key-intro__item .modal a.theme-purple,
-    .theme-purple .key-intro__item .modal a {
+    .theme-purple .key-intro__item .modal,
+    .key-intro__item .modal a.theme-purple,
+    .theme-purple
+    .key-intro__item .modal a {
       color: #1a141f;
       transition-property: color;
       transition-duration: 1.5s; }
@@ -585,33 +593,171 @@ strong {
 
 .themify-tool__sub-button.theme-bw,
 .theme-bw .themify-tool__sub-button {
-  background: #303030;
+  background: #a1a1a1;
   transition-property: background;
   transition-duration: 1.5s; }
 
 .themify-tool__sub-button.theme-peach-azure,
 .theme-peach-azure .themify-tool__sub-button {
-  background: #e57171;
+  background: #27a599;
   transition-property: background;
   transition-duration: 1.5s; }
 
 .themify-tool__sub-button.theme-teal-orange,
 .theme-teal-orange .themify-tool__sub-button {
-  background: #153c47;
+  background: #ff8800;
   transition-property: background;
   transition-duration: 1.5s; }
 
 .themify-tool__sub-button.theme-contrast,
 .theme-contrast .themify-tool__sub-button {
-  background: #0d0d0d;
+  background: #f5ec3d;
   transition-property: background;
   transition-duration: 1.5s; }
 
 .themify-tool__sub-button.theme-purple,
 .theme-purple .themify-tool__sub-button {
-  background: #35134e;
+  background: #f28cd9;
   transition-property: background;
   transition-duration: 1.5s; }
+
+/*Social Card*/
+.social-card-wrapper {
+  padding: 5rem 0; }
+
+.social-card.theme-bw,
+.theme-bw .social-card {
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+  transition-property: box-shadow;
+  transition-duration: 1.5s; }
+
+.social-card.theme-peach-azure,
+.theme-peach-azure .social-card {
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+  transition-property: box-shadow;
+  transition-duration: 1.5s; }
+
+.social-card.theme-teal-orange,
+.theme-teal-orange .social-card {
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+  transition-property: box-shadow;
+  transition-duration: 1.5s; }
+
+.social-card.theme-contrast,
+.theme-contrast .social-card {
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+  transition-property: box-shadow;
+  transition-duration: 1.5s; }
+
+.social-card.theme-purple,
+.theme-purple .social-card {
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+  transition-property: box-shadow;
+  transition-duration: 1.5s; }
+
+.social-card__content.theme-bw,
+.theme-bw .social-card__content {
+  color: white;
+  background: #303030;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
+.social-card__content.theme-peach-azure,
+.theme-peach-azure .social-card__content {
+  color: white;
+  background: #e57171;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
+.social-card__content.theme-teal-orange,
+.theme-teal-orange .social-card__content {
+  color: #fff3e6;
+  background: #153c47;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
+.social-card__content.theme-contrast,
+.theme-contrast .social-card__content {
+  color: white;
+  background: #0d0d0d;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
+.social-card__content.theme-purple,
+.theme-purple .social-card__content {
+  color: white;
+  background: #35134e;
+  transition-property: color, background;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link.theme-bw,
+.theme-bw .social-card__share-area .share-link {
+  color: #a1a1a1;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link.theme-peach-azure,
+.theme-peach-azure .social-card__share-area .share-link {
+  color: #27a599;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link.theme-teal-orange,
+.theme-teal-orange .social-card__share-area .share-link {
+  color: #ff8800;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link.theme-contrast,
+.theme-contrast .social-card__share-area .share-link {
+  color: #f5ec3d;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link.theme-purple,
+.theme-purple .social-card__share-area .share-link {
+  color: #f28cd9;
+  transition-property: color;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link__icon.theme-bw,
+.theme-bw .social-card__share-area .share-link__icon {
+  color: #a1a1a1;
+  opacity: 0.7;
+  transition-property: color, opacity;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link__icon.theme-peach-azure,
+.theme-peach-azure .social-card__share-area .share-link__icon {
+  color: #27a599;
+  opacity: 0.7;
+  transition-property: color, opacity;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link__icon.theme-teal-orange,
+.theme-teal-orange .social-card__share-area .share-link__icon {
+  color: #ff8800;
+  opacity: 0.7;
+  transition-property: color, opacity;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link__icon.theme-contrast,
+.theme-contrast .social-card__share-area .share-link__icon {
+  color: #f5ec3d;
+  opacity: 0.7;
+  transition-property: color, opacity;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link__icon.theme-purple,
+.theme-purple .social-card__share-area .share-link__icon {
+  color: #f28cd9;
+  opacity: 0.7;
+  transition-property: color, opacity;
+  transition-duration: 1.5s; }
+
+.social-card__share-area .share-link__icon:hover {
+  opacity: 1.0;
+  transition-duration: 0.2s; }
 
 /*Footer*/
 .page-footer.theme-bw,
@@ -651,68 +797,63 @@ strong {
 
 .page-footer a.theme-bw,
 .theme-bw .page-footer a {
-  color: #e4e2e2;
-  text-shadow: 1px 1px 1px gray;
-  transition-property: color, text-shadow;
+  color: #f3f2f2;
+  transition-property: color;
   transition-duration: 1.5s; }
 
 .page-footer a.theme-peach-azure,
 .theme-peach-azure .page-footer a {
-  color: #6eddd2;
-  text-shadow: 1px 1px 2px gray;
-  transition-property: color, text-shadow;
+  color: #eafaf9;
+  transition-property: color;
   transition-duration: 1.5s; }
 
 .page-footer a.theme-teal-orange,
 .theme-teal-orange .page-footer a {
-  color: #fefaf5;
-  text-shadow: 1px 1px 2px gray;
-  transition-property: color, text-shadow;
+  color: #fef2e7;
+  transition-property: color;
   transition-duration: 1.5s; }
 
 .page-footer a.theme-contrast,
 .theme-contrast .page-footer a {
   color: white;
-  text-shadow: 1px 1px 2px gray;
-  transition-property: color, text-shadow;
+  transition-property: color;
   transition-duration: 1.5s; }
 
 .page-footer a.theme-purple,
 .theme-purple .page-footer a {
   color: #e6e4e7;
-  text-shadow: 1px 1px 1px gray;
-  transition-property: color, text-shadow;
+  transition-property: color;
   transition-duration: 1.5s; }
 
-.page-footer a:hover.theme-bw,
-.theme-bw .page-footer a:hover {
-  color: white;
+.page-footer a:not(.btn):hover.theme-bw,
+.theme-bw .page-footer a:not(.btn):hover {
+  color: #a1a1a1;
   transition-property: color;
-  transition-duration: 0.25s; }
+  transition-duration: 0.15s; }
 
-.page-footer a:hover.theme-peach-azure,
-.theme-peach-azure .page-footer a:hover {
-  color: white;
+.page-footer a:not(.btn):hover.theme-peach-azure,
+.theme-peach-azure .page-footer a:not(.btn):hover {
+  color: #27a599;
   transition-property: color;
-  transition-duration: 0.25s; }
+  transition-duration: 0.15s; }
 
-.page-footer a:hover.theme-teal-orange,
-.theme-teal-orange .page-footer a:hover {
-  color: #fff3e6;
+.page-footer a:not(.btn):hover.theme-teal-orange,
+.theme-teal-orange .page-footer a:not(.btn):hover {
+  color: #ff8800;
   transition-property: color;
-  transition-duration: 0.25s; }
+  transition-duration: 0.15s; }
 
-.page-footer a:hover.theme-contrast,
-.theme-contrast .page-footer a:hover {
-  color: white;
+.page-footer a:not(.btn):hover.theme-contrast,
+.theme-contrast .page-footer a:not(.btn):hover {
+  color: #f5ec3d;
   transition-property: color;
-  transition-duration: 0.25s; }
+  transition-duration: 0.15s; }
 
-.page-footer a:hover.theme-purple,
-.theme-purple .page-footer a:hover {
-  color: white;
+.page-footer a:not(.btn):hover.theme-purple,
+.theme-purple .page-footer a:not(.btn):hover {
+  color: #f28cd9;
   transition-property: color;
-  transition-duration: 0.25s; }
+  transition-duration: 0.15s; }
 
 .page-footer .btn.theme-bw,
 .theme-bw .page-footer .btn {
@@ -749,6 +890,9 @@ strong {
 
 .page-footer__col-right {
   text-align: left; }
+
+.page-footer .footer-copyright {
+  font-size: 1.0em; }
 
 @media screen and (max-width: 600px) {
   .page-footer__col-left, .page-footer__col-right {

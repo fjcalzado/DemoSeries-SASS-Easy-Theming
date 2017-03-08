@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Themify Me!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="StyleSheet" href="./css/site.css" type="text/css" />
     <link rel="StyleSheet" href="./css/prism.css" type="text/css" />
     <!-- <link rel="StyleSheet" href="./css/vanilla.css" type="text/css" /> -->
@@ -38,7 +39,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#id-key-intro">Intro</a></li>
                     <li><a href="#id-main-panel">Main</a></li>
-                    <li><a href="#id-outtro">Footer</a></li>
+                    <li><a href="#id-outtro">Share It</a></li>
                 </ul>
                 <ul class="side-nav" id="nav-mobile">
                     <li><a href="#id-key-intro">Intro</a></li>
@@ -242,18 +243,27 @@
 
                         <p class="flow-text">This code will generate, for every theme, a <em>themified</em> rule to assign the theme value(s) to every input CSS property(s). Note that I have also added transition effect to the <em>themified</em> properties to make theme changing
                             nicer (unfortunately, a font family change cannot be transitionated).</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="container">
+                    <div class="article-title">
+                        <h2>Usage</h2>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="article-content">
+                      <p class="flow-text">We are almost done! Here you have a basic usage example, either with single or mutiple properties, that you can add to your main <code>site.scss</code> file:</p>
+                      <pre>
+                        <code class="language-scss flow-text">
+                          .navbar {
+                              @include themify((background-color,box-shadow),(primary-color, shadow-dark));
 
-                        <p class="flow-text">We are almost done! Here you have a basic usage example, either with single or mutiple properties, that you can add to your main <code>site.scss</code> file:</p>
-                        <pre>
-                          <code class="language-scss flow-text">
-                            .navbar {
-                                @include themify((background-color,box-shadow),(primary-color, shadow-dark));
-
-                                a {
-                                    @include themify(color, text-color-light);
-                                }
-                          </code>
-                        </pre>
+                              a {
+                                  @include themify(color, text-color-light);
+                              }
+                        </code>
+                      </pre>
                     </div>
                 </div>
             </article>
@@ -276,7 +286,7 @@
                           </code>
                         </pre>
 
-                        <p class="flow-text">And a JS function like this one based on regular expressions to quickly change your markup theme:</p>
+                        <p class="flow-text">And a JS function like the one below based on regular expressions to quickly change your markup theme on the fly:</p>
                         <pre>
                           <code class="language-js flow-text">
                             var themifyMe = function(themeName) {
@@ -286,14 +296,49 @@
                             }
                           </code>
                         </pre>
+                        <p class="flow-text">Just attach it to an user actionable item.</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="container">
+                    <div class="article-title">
+                        <h2>Try Me!</h2>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="article-content">
+                        <p class="flow-text">Did you see that flashing button down on your right? Click it and re-style this site! Included themes are just a sample, but this approach allows you to easily expand your collection within minutes.</p>
                     </div>
                 </div>
             </article>
         </div>
 
-        <!-- Secondary Panel Outtro -->
+        <!-- Social Card Outtro -->
         <div class="" id="id-outtro">
-            <!-- TODO: Implementation pending -->
+            <div class="social-card-wrapper">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2 center">
+                        <div class="card social-card">
+                            <div class="card-content social-card__content">
+                                <span class="card-title">Did you like it? Share it</span>
+                            </div>
+                            <div class="card-action social-card__share-area">
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&t=Themify%20Me!" target="_blank"><i class="fa fa-facebook-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Tweet" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&text=Themify%20Me!:%20https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&via=fjcalzado" target="_blank"><i class="fa fa-twitter-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&title=Themify%20Me!&summary=SASS%20Easy%20Theming%20Tutorial&source=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Share on Google+" href="https://plus.google.com/share?url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F" target="_blank"><i class="fa fa-google-plus-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Submit to Reddit" href="http://www.reddit.com/submit?url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&title=Themify%20Me!" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Post to Tumblr" href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&t=Themify%20Me!&s=" target="_blank" title="Post to Tumblr"><i class="fa fa-tumblr-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -305,11 +350,11 @@
                 <i class="material-icons large">palette</i>
             </a>
             <ul>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Black and White" href="javascript:void(0)" onclick="themifyMe('bw')"><i class="material-icons">invert_colors</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Peach and Azure" href="javascript:void(0)" onclick="themifyMe('peach-azure')"><i class="material-icons">filter_vintage</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Teal and Orange" href="javascript:void(0)" onclick="themifyMe('teal-orange')"><i class="material-icons">star</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="High Contrast" href="javascript:void(0)" onclick="themifyMe('contrast')"><i class="material-icons">brightness_medium</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Girly Purple" href="javascript:void(0)" onclick="themifyMe('purple')"><i class="material-icons">new_releases</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Black and White" href="javascript:void(0)" onclick="themifyMe('bw')"><i class="material-icons themify-tool__sub-button-icon">invert_colors</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Peach and Azure" href="javascript:void(0)" onclick="themifyMe('peach-azure')"><i class="material-icons themify-tool__sub-button-icon">filter_vintage</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Teal and Orange" href="javascript:void(0)" onclick="themifyMe('teal-orange')"><i class="material-icons themify-tool__sub-button-icon">star</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="High Contrast" href="javascript:void(0)" onclick="themifyMe('contrast')"><i class="material-icons themify-tool__sub-button-icon">brightness_medium</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Girly Purple" href="javascript:void(0)" onclick="themifyMe('purple')"><i class="material-icons themify-tool__sub-button-icon">new_releases</i></a></li>
             </ul>
         </div>
     </div>
@@ -321,7 +366,7 @@
                 <div class="col s12 m6">
                     <div class="page-footer__col-left">
                         <h5>Purpose</h5>
-                        <p>This demo was done as part of the 2017 LemonCode Front-End Master</p>
+                        <p>This demo website was done as part of the 2017 LemonCode Front-End Master</p>
                         <a class="btn" href="http://lemoncode.net/master-frontend/#inicio-banner" target="_blank">Info</a>
                     </div>
                 </div>
@@ -329,11 +374,11 @@
                     <div class="page-footer__col-right">
                         <h5>Links</h5>
                         <ul>
-                            <li><a href="http://lemoncode.net/" target="_blank">LemonCode</a></li>
                             <li><a href="http://materializecss.com/" target="_blank">Materialize</a></li>
                             <li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
                             <li><a href="https://en.bem.info/" target="_blank">BEM</a></li>
                             <li><a href="http://qrohlf.com/trianglify/" target="_blank">Trianglify</a></li>
+                            <li><a href="http://prismjs.com/index.html" target="_blank">Prism</a></li>
                         </ul>
                     </div>
                 </div>
@@ -350,8 +395,20 @@
                     </div>
                     <div class="col s12 m6">
                         <div class="page-footer__col-right">
-                            <a href="mailto:fjcalzadosp@gmail.com">
-                                <i class="tiny material-icons">email</i> Contact Me
+                            <a class="contact-link" href="mailto:fjcalzadosp@gmail.com">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                            <a class="contact-link" href="https://www.facebook.com/fjcalzado" target="_blank">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            </a>
+                            <a class="contact-link" href="https://twitter.com/fjcalzadosp" target="_blank">
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            </a>
+                            <a class="contact-link" href="https://www.linkedin.com/in/fjcalzado/" target="_blank">
+                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            </a>
+                            <a class="contact-link" href="https://github.com/fjcalzado" target="_blank">
+                                <i class="fa fa-github-square" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
