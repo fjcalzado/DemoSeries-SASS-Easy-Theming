@@ -13,10 +13,10 @@ $.fn.isInViewport = function() {
 // Document Initialization.
 $(document).ready(function() {
 
-    // *** Side-nav initialization ***
+    // *** Initialization ***
     $(".button-collapse").sideNav();
-
-    // *** Theme initialization with default***
+    $(".modal").modal();
+    // Theme initialization with default
     themifyMe("bw");
 
     // Sticky nav-bar logic as offered by google.

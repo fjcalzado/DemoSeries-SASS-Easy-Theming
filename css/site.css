@@ -1,9 +1,9 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-@import "https://fonts.googleapis.com/css?family=Raleway:0,800";
-@import "https://fonts.googleapis.com/css?family=Ubuntu:0,800";
-@import "https://fonts.googleapis.com/css?family=Open+Sans:0,800";
-@import "https://fonts.googleapis.com/css?family=Roboto+Mono:0,800";
-@import "https://fonts.googleapis.com/css?family=Montserrat:0,800";
+@import "https://fonts.googleapis.com/css?family=Raleway:0,600,800";
+@import "https://fonts.googleapis.com/css?family=Ubuntu:0,600,800";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:0,600,800";
+@import "https://fonts.googleapis.com/css?family=Roboto+Mono:0,600,800";
+@import "https://fonts.googleapis.com/css?family=Montserrat:0,600,800";
 /*GENERAL*/
 body.theme-bw,
 .theme-bw body {
@@ -34,6 +34,9 @@ body.theme-purple,
   font-family: Montserrat;
   transition-property: font-family;
   transition-duration: 1.5s; }
+
+strong {
+  font-weight: 600; }
 
 .material-tooltip .backdrop.theme-bw,
 .theme-bw .material-tooltip .backdrop {
@@ -170,130 +173,113 @@ body.theme-purple,
   .header-jumbo__updater .btn-floating {
     background-color: rgba(0, 0, 0, 0.1); }
 
-.nav-sticky.theme-bw,
-.theme-bw .nav-sticky {
-  background: #303030;
-  box-shadow: 0 2px 6px #404040;
-  transition-property: background, box-shadow;
-  transition-duration: 1.5s; }
-
-.nav-sticky.theme-peach-azure,
-.theme-peach-azure .nav-sticky {
-  background: #e57171;
-  box-shadow: 0 2px 2px gray;
-  transition-property: background, box-shadow;
-  transition-duration: 1.5s; }
-
-.nav-sticky.theme-teal-orange,
-.theme-teal-orange .nav-sticky {
-  background: #153c47;
-  box-shadow: 0 2px 6px #404040;
-  transition-property: background, box-shadow;
-  transition-duration: 1.5s; }
-
-.nav-sticky.theme-contrast,
-.theme-contrast .nav-sticky {
-  background: #0d0d0d;
-  box-shadow: 0 2px 6px #404040;
-  transition-property: background, box-shadow;
-  transition-duration: 1.5s; }
-
-.nav-sticky.theme-purple,
-.theme-purple .nav-sticky {
-  background: #35134e;
-  box-shadow: 0 2px 6px #404040;
-  transition-property: background, box-shadow;
-  transition-duration: 1.5s; }
-
-.nav-sticky a.theme-bw,
-.theme-bw .nav-sticky a {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky a.theme-peach-azure,
-.theme-peach-azure .nav-sticky a {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky a.theme-teal-orange,
-.theme-teal-orange .nav-sticky a {
-  color: #fff3e6;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky a.theme-contrast,
-.theme-contrast .nav-sticky a {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky a.theme-purple,
-.theme-purple .nav-sticky a {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .brand-logo .material-icons.theme-bw,
-.theme-bw .nav-sticky .brand-logo .material-icons {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .brand-logo .material-icons.theme-peach-azure,
-.theme-peach-azure .nav-sticky .brand-logo .material-icons {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .brand-logo .material-icons.theme-teal-orange,
-.theme-teal-orange .nav-sticky .brand-logo .material-icons {
-  color: #fff3e6;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .brand-logo .material-icons.theme-contrast,
-.theme-contrast .nav-sticky .brand-logo .material-icons {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .brand-logo .material-icons.theme-purple,
-.theme-purple .nav-sticky .brand-logo .material-icons {
-  color: white;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .side-nav a.theme-bw,
-.theme-bw .nav-sticky .side-nav a {
-  color: #4a4a4a;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .side-nav a.theme-peach-azure,
-.theme-peach-azure .nav-sticky .side-nav a {
-  color: black;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .side-nav a.theme-teal-orange,
-.theme-teal-orange .nav-sticky .side-nav a {
-  color: #091b20;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .side-nav a.theme-contrast,
-.theme-contrast .nav-sticky .side-nav a {
-  color: #0d0d0d;
-  transition-property: color;
-  transition-duration: 1.5s; }
-
-.nav-sticky .side-nav a.theme-purple,
-.theme-purple .nav-sticky .side-nav a {
-  color: #1a141f;
-  transition-property: color;
-  transition-duration: 1.5s; }
+.nav-sticky {
+  z-index: 99; }
+  .nav-sticky.theme-bw,
+  .theme-bw .nav-sticky {
+    background: #303030;
+    box-shadow: 0 2px 6px #404040;
+    transition-property: background, box-shadow;
+    transition-duration: 1.5s; }
+  .nav-sticky.theme-peach-azure,
+  .theme-peach-azure .nav-sticky {
+    background: #e57171;
+    box-shadow: 0 2px 2px gray;
+    transition-property: background, box-shadow;
+    transition-duration: 1.5s; }
+  .nav-sticky.theme-teal-orange,
+  .theme-teal-orange .nav-sticky {
+    background: #153c47;
+    box-shadow: 0 2px 6px #404040;
+    transition-property: background, box-shadow;
+    transition-duration: 1.5s; }
+  .nav-sticky.theme-contrast,
+  .theme-contrast .nav-sticky {
+    background: #0d0d0d;
+    box-shadow: 0 2px 6px #404040;
+    transition-property: background, box-shadow;
+    transition-duration: 1.5s; }
+  .nav-sticky.theme-purple,
+  .theme-purple .nav-sticky {
+    background: #35134e;
+    box-shadow: 0 2px 6px #404040;
+    transition-property: background, box-shadow;
+    transition-duration: 1.5s; }
+  .nav-sticky a.theme-bw,
+  .theme-bw .nav-sticky a {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky a.theme-peach-azure,
+  .theme-peach-azure .nav-sticky a {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky a.theme-teal-orange,
+  .theme-teal-orange .nav-sticky a {
+    color: #fff3e6;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky a.theme-contrast,
+  .theme-contrast .nav-sticky a {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky a.theme-purple,
+  .theme-purple .nav-sticky a {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .brand-logo .material-icons.theme-bw,
+  .theme-bw .nav-sticky .brand-logo .material-icons {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .brand-logo .material-icons.theme-peach-azure,
+  .theme-peach-azure .nav-sticky .brand-logo .material-icons {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .brand-logo .material-icons.theme-teal-orange,
+  .theme-teal-orange .nav-sticky .brand-logo .material-icons {
+    color: #fff3e6;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .brand-logo .material-icons.theme-contrast,
+  .theme-contrast .nav-sticky .brand-logo .material-icons {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .brand-logo .material-icons.theme-purple,
+  .theme-purple .nav-sticky .brand-logo .material-icons {
+    color: white;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .side-nav a.theme-bw,
+  .theme-bw .nav-sticky .side-nav a {
+    color: #4a4a4a;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .side-nav a.theme-peach-azure,
+  .theme-peach-azure .nav-sticky .side-nav a {
+    color: black;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .side-nav a.theme-teal-orange,
+  .theme-teal-orange .nav-sticky .side-nav a {
+    color: #091b20;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .side-nav a.theme-contrast,
+  .theme-contrast .nav-sticky .side-nav a {
+    color: #0d0d0d;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .nav-sticky .side-nav a.theme-purple,
+  .theme-purple .nav-sticky .side-nav a {
+    color: #1a141f;
+    transition-property: color;
+    transition-duration: 1.5s; }
 
 /*MAIN*/
 .key-intro {
@@ -341,7 +327,63 @@ body.theme-purple,
     padding: 2rem 0; }
   .key-intro__item {
     padding: 1rem; }
+    .key-intro__item a.theme-bw,
+    .theme-bw .key-intro__item a {
+      color: white;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item a.theme-peach-azure,
+    .theme-peach-azure .key-intro__item a {
+      color: white;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item a.theme-teal-orange,
+    .theme-teal-orange .key-intro__item a {
+      color: #fff3e6;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item a.theme-contrast,
+    .theme-contrast .key-intro__item a {
+      color: white;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item a.theme-purple,
+    .theme-purple .key-intro__item a {
+      color: white;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal.theme-bw,
+    .theme-bw .key-intro__item .modal, .key-intro__item .modal a.theme-bw,
+    .theme-bw .key-intro__item .modal a {
+      color: #4a4a4a;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal.theme-peach-azure,
+    .theme-peach-azure .key-intro__item .modal, .key-intro__item .modal a.theme-peach-azure,
+    .theme-peach-azure .key-intro__item .modal a {
+      color: black;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal.theme-teal-orange,
+    .theme-teal-orange .key-intro__item .modal, .key-intro__item .modal a.theme-teal-orange,
+    .theme-teal-orange .key-intro__item .modal a {
+      color: #091b20;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal.theme-contrast,
+    .theme-contrast .key-intro__item .modal, .key-intro__item .modal a.theme-contrast,
+    .theme-contrast .key-intro__item .modal a {
+      color: #0d0d0d;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal.theme-purple,
+    .theme-purple .key-intro__item .modal, .key-intro__item .modal a.theme-purple,
+    .theme-purple .key-intro__item .modal a {
+      color: #1a141f;
+      transition-property: color;
+      transition-duration: 1.5s; }
 
+/*Articles*/
 .articles article {
   padding: 4rem 0 2rem; }
   .articles article.theme-bw,
@@ -419,6 +461,90 @@ body.theme-purple,
     color: black;
     transition-property: color;
     transition-duration: 1.5s; }
+  .articles article .tabs a.theme-bw,
+  .theme-bw .articles article .tabs a {
+    color: #a1a1a1;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article .tabs a.theme-peach-azure,
+  .theme-peach-azure .articles article .tabs a {
+    color: #27a599;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article .tabs a.theme-teal-orange,
+  .theme-teal-orange .articles article .tabs a {
+    color: #ff8800;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article .tabs a.theme-contrast,
+  .theme-contrast .articles article .tabs a {
+    color: #f5ec3d;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article .tabs a.theme-purple,
+  .theme-purple .articles article .tabs a {
+    color: #f28cd9;
+    transition-property: color;
+    transition-duration: 1.5s; }
+  .articles article .tabs .indicator.theme-bw,
+  .theme-bw .articles article .tabs .indicator {
+    background: #303030;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article .tabs .indicator.theme-peach-azure,
+  .theme-peach-azure .articles article .tabs .indicator {
+    background: #e57171;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article .tabs .indicator.theme-teal-orange,
+  .theme-teal-orange .articles article .tabs .indicator {
+    background: #153c47;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article .tabs .indicator.theme-contrast,
+  .theme-contrast .articles article .tabs .indicator {
+    background: #0d0d0d;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article .tabs .indicator.theme-purple,
+  .theme-purple .articles article .tabs .indicator {
+    background: #35134e;
+    transition-property: background;
+    transition-duration: 1.5s; }
+  .articles article pre {
+    border-width: thin;
+    border-radius: 1vmin;
+    border-style: solid; }
+    .articles article pre.theme-bw,
+    .theme-bw .articles article pre {
+      background: #f2f2f2;
+      border-color: white;
+      transition-property: background, border-color;
+      transition-duration: 1.5s; }
+    .articles article pre.theme-peach-azure,
+    .theme-peach-azure .articles article pre {
+      background: #eafaf9;
+      border-color: white;
+      transition-property: background, border-color;
+      transition-duration: 1.5s; }
+    .articles article pre.theme-teal-orange,
+    .theme-teal-orange .articles article pre {
+      background: #fff3e6;
+      border-color: #fff3e6;
+      transition-property: background, border-color;
+      transition-duration: 1.5s; }
+    .articles article pre.theme-contrast,
+    .theme-contrast .articles article pre {
+      background: #fefde7;
+      border-color: white;
+      transition-property: background, border-color;
+      transition-duration: 1.5s; }
+    .articles article pre.theme-purple,
+    .theme-purple .articles article pre {
+      background: #fce8f7;
+      border-color: white;
+      transition-property: background, border-color;
+      transition-duration: 1.5s; }
 
 /*Themify Tool*/
 @keyframes highlight-expand {

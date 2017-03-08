@@ -6,6 +6,10 @@ body {
     @include themify(font-family, primary-font);
 }
 
+strong {
+  font-weight: 600;
+}
+
 .material-tooltip {
     .backdrop {
         @include themify(background-color, secondary-color);
@@ -51,6 +55,7 @@ body {
 }
 
 .nav-sticky {
+    z-index: 99;  // Put it on z-top when fixed on top of the page, otherwise, some materialize components may interfere.
     @include themify((background,box-shadow),(primary-color, shadow-dark));
 
     a {
@@ -86,9 +91,18 @@ body {
 
     &__item {
         padding: 1rem;
+
+        a {
+          @include themify(color, text-color-light);
+        }
+
+        .modal, .modal a {
+          @include themify(color, text-color-dark);
+        }
     }
 }
 
+/*Articles*/
 .articles {
     article {
         padding: 4rem 0 2rem;
@@ -100,6 +114,24 @@ body {
 
         a {
             @include themify(color, link-color-dark);
+        }
+
+        .tabs{
+
+          a {
+            @include themify(color, secondary-color);
+          }
+
+          .indicator {
+            @include themify(background, primary-color);
+          }
+        }
+
+        pre {
+          border-width: thin;
+          border-radius: 1vmin;
+          border-style: solid;
+          @include themify((background, border-color), (secondary-color-washed, text-color-light));
         }
     }
 }

@@ -6,26 +6,27 @@
     <title>Themify Me!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="StyleSheet" href="./css/site.css" type="text/css" />
+    <link rel="StyleSheet" href="./css/prism.css" type="text/css" />
     <!-- <link rel="StyleSheet" href="./css/vanilla.css" type="text/css" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="theme-bw">
-    <!-- Header section -->
-    <!-- Jumbo Header -->
+
+    <!-- Jumbo Header section -->
     <div class="header-jumbo">
-      <div class="header-jumbo__updater left">
-        <a class="btn-floating btn-large waves-effect tooltipped" data-position="right" data-tooltip="Refresh Triangles" href="javascript:void(0)" onclick="themifyHeaderJumbo()"><i class="large material-icons">loop</i></a>
-      </div>
-      <div class="header-jumbo__canvas">
-        <div class="header-jumbo__usable-area container">
-          <div class="header-jumbo__title">
-              <h1>Themes.</h1>
-              <h1>Made.</h1>
-              <h1>Easy.</h1>
-          </div>
+        <div class="header-jumbo__updater left">
+            <a class="btn-floating btn-large waves-effect tooltipped" data-position="right" data-tooltip="Randomize Triangles" href="javascript:void(0)" onclick="themifyHeaderJumbo()"><i class="large material-icons">loop</i></a>
         </div>
-      </div>
+        <div class="header-jumbo__canvas">
+            <div class="header-jumbo__usable-area container">
+                <div class="header-jumbo__title">
+                    <h1>Themes.</h1>
+                    <h1>Made.</h1>
+                    <h1>Easy.</h1>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Navigation Bar -->
@@ -52,27 +53,54 @@
         <!-- Key Intro Panel -->
         <div class="key-intro" id="id-key-intro">
             <div class="key-intro__title center">
-                <h4>Website Powered By</h4>
+                <h4>Powered By</h4>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col s12 m4 center">
                         <div class="key-intro__item">
-                            <i class="large material-icons">view_quilt</i>
+                            <a href="#id-modal-materialize"><i class="large material-icons">view_quilt</i></a>
+                            <div class="modal" id="id-modal-materialize">
+                                <div class="modal-content">
+                                    <p class="flow-text">Material Design is a design language developed in 2014 by Google. Expanding upon the "card" motifs that debuted in Google Now, Material Design makes more liberal use of grid-based layouts, responsive animations and
+                                        transitions, padding, and depth effects such as lighting and shadows.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                                </div>
+                            </div>
                             <h3>Materialize</h3>
                             <p class="flow-text">Responsive CSS framework based on Material Design by Google</p>
                         </div>
                     </div>
                     <div class="col s12 m4 center">
                         <div class="key-intro__item">
-                            <i class="large material-icons">my_location</i>
+                            <a href="#id-modal-sass"><i class="large material-icons">my_location</i></a>
+                            <div class="modal" id="id-modal-sass">
+                                <div class="modal-content">
+                                    <p class="flow-text">Sass is a scripting language that gets interpreted into CSS (transcompiled) and serves as an extension to it. It boasts interesting features such as variables, nesting, imports, operators, extension (inheritance) and
+                                        the powerful mixins, which let us make group of CSS declarations to be reused throught the site.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                                </div>
+                            </div>
                             <h3>SASS</h3>
                             <p class="flow-text">CSS on steroids: power and elegance to the basic language</p>
                         </div>
                     </div>
                     <div class="col s12 m4 center">
                         <div class="key-intro__item">
-                            <i class="large material-icons">settings_ethernet</i>
+                            <a href="#id-modal-bem"><i class="large material-icons">settings_ethernet</i></a>
+                            <div class="modal" id="id-modal-bem">
+                                <div class="modal-content">
+                                    <p class="flow-text">Although BEM is a complete methodology supported by its own development platform, I have just taken shared its Block-Element-Modifier guideline for naming convention. For the time being, the whole BEM approach its beyond
+                                        this exercise.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">OK</a>
+                                </div>
+                            </div>
                             <h3>BEM</h3>
                             <p class="flow-text">A web development approach to achieve flexible and maintainable code</p>
                         </div>
@@ -86,29 +114,178 @@
             <article>
                 <div class="container">
                     <div class="article-title">
-                        <h2>Layout</h2>
+                        <h2>Introduction</h2>
                     </div>
                     <div class="divider"></div>
                     <div class="article-content">
-                        <p class="flow-text"><abbr title="Responsive Web Design">RWD</abbr> is an approach to web design aimed at allowing desktop webpages to be viewed in response to the size of the screen or web browser one is viewing with. Thus, using responsive design
-                            techniques, webpages layout are enabled to adapt to a <strong>variety of screen sizes</strong>.</p>
-                        <p class="flow-text">A key part of this design approach is the use of <strong>fluid, proportion-based grids</strong>. The fluid grid concept calls for page element sizing to be in <strong>relative units</strong> like percentages, rather than absolute
-                            units like pixels or points. For that purpose, space is divided in a row-column fashion schema where several elements can share the same row by spanning one or multiple columns.</p>
-                        <p class="flow-text">Implementation of responsive design has led to a common set of layouts frequently used by designers. From a high-level perspective, we could classify them into 5 categories: <em>mostly fluid</em>, <em>column drop</em>,
-                            <em>layout shifter</em>,
-                            <em>tiny tweaks</em> and <em>off canvas</em></p>
+                        <p class="flow-text">The idea behind this demo site is to provide an easy way to apply <em>on-the-fly</em> themes without messing around with intensive JavaScript DOM modifications. Actually, this website just needs one <em>single-liner</em> JavaScript
+                            function to do the job. <strong>Isn't it great?</strong></p>
+                        <p class="flow-text">For this purpose, I will let SASS to take care of the CSS rules generation when building a theme. Rule schemes for each theme may bring dozens of variations, and thus, managing this code by hand is highly impractical.</p>
+                        <p class="flow-text">I recommend reading <strong><a href="https://www.sitepoint.com/sass-theming-neverending-story/">this interesting article</a></strong> by <strong><a href="http://hugogiraudel.com/">Hugo Giraudel</a></strong> where several approaches
+                            for this task are presented and documented. I have implemented a slightly modified version of the <em>individual mixins approach</em> as we will see next.</p>
                     </div>
                 </div>
             </article>
             <article>
                 <div class="container">
                     <div class="article-title">
-                        <h2>Themes made by composition</h2>
+                        <h2>What is a theme?</h2>
                     </div>
                     <div class="divider"></div>
                     <div class="article-content">
-                        <p class="flow-text">Another popular pattern starts with a multi-column layout and ends up with a single column layout, dropping columns along the way as screen sizes get narrower. Unlike the Mostly Fluid pattern, the overall size of elements in this
-                            layout tend to stay consistent.</p>
+                        <p class="flow-text">In short, a theme is the visual appearance of our site, right? Well, lets go further and think of it as a preset package of elements that graphically customize our web content. Or if you prefer, in a more informal language, <em>a theme is the recipe that makes our web look and feel nice</em>.
+                            And every recipe is made of ingredients!</p>
+                        <p class="flow-text">We can pack as many ingredients in our recipe as we want, but remember, a good dish is made with a few quality ingredients. <em>Quality over quantity</em>. Let's keep it simple by the moment and consider just a few of them, probably
+                            the most significative:</p>
+                        <ul class="flow-text browser-default">
+                            <li>Color Palette, with primary, secondary and auxiliar colors.</li>
+                            <li>Typography.</li>
+                            <li>Shadows, if any.</li>
+                        </ul>
+                        <p class="flow-text">Now, lets put this into code.</p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="container">
+                    <div class="article-title">
+                        <h2>SASS to the rescue!</h2>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="article-content">
+                        <p class="flow-text">First of all, lets code our <em>ingredients</em> into theme properties. Real themes used in this site will have plenty more properties, but lets show just a bit to keep things simpler:</p>
+                        <div class="row">
+
+                            <div class="col s12">
+                                <ul class="tabs">
+                                    <li class="tab col s4"><a href="#id-tab-bw">Black and White</a></li>
+                                    <li class="tab col s4"><a href="#id-tab-pa">Peach and Azure</a></li>
+                                    <li class="tab col s4"><a href="#id-tab-hc">High Contrast</a></li>
+                                </ul>
+                            </div>
+
+                            <div id="id-tab-bw" class="col s12">
+                                <pre>
+                                  <code class="language-scss flow-text">
+                                    ( "primary-font": Raleway,
+                                      "primary-color": hsl(0, 0%, 19%),
+                                      "secondary-color": hsl(240, 0%, 63%) )
+                                </code>
+                                </pre>
+                            </div>
+                            <div id="id-tab-pa" class="col s12">
+                                <pre>
+                                <code class="language-scss flow-text">
+                                  ( "primary-font": Open Sans,
+                                    "primary-color": hsl(0, 69%, 67%),
+                                    "secondary-color": hsl(174, 62%, 40%) )
+                              </code>
+                              </pre>
+                            </div>
+                            <div id="id-tab-hc" class="col s12">
+                                <pre>
+                                <code class="language-scss flow-text">
+                                  ( "primary-font": Roboto Mono,
+                                    "primary-color": hsl(0, 0%, 5%),
+                                    "secondary-color": hsl(57, 90%, 60%) )
+                              </code>
+                              </pre>
+                            </div>
+                        </div>
+
+                        <p class="flow-text">Then, we can create a collection of themes very easily. Lets save it in our <code>_theme.scss</code> file:</p>
+
+                        <pre>
+                          <code class="language-scss flow-text">
+                            $themeCollection: (
+                              "bw": (/* Properties here */),
+                              "peach-azure": (/* Properties here */),
+                              "contrast": (/* Properties here */)
+                            ) !default;
+                          </code>
+                        </pre>
+
+                        <p class="flow-text">Now its time to automatically <em>bind</em> these <strong>theme</strong> properties to real <strong>CSS</strong> properties. Here is where magic happens thanks to the SASS mixins. Mixins are just templates that you can reuse on
+                            demand with the add-in of parameters, so we can create a smarter logic inside than just copy/paste chunks of code.</p>
+                        <p class="flow-text">What if we do a generic mixin to themify whatever CSS property with theme values? Lets go for it! This is how the file <code>_mixins.scss</code> will look like:</p>
+
+                        <pre>
+                          <code class="language-scss flow-text">
+                            @import "themes";
+
+                            $default-duration: 1.5s;
+
+                            @mixin themify( $properties,
+                                            $keys,
+                                            $transition-duration: $default-duration,
+                                            $themes: $themeCollection)
+                            {
+                              // Iterate over the themes.
+                              @each $theme, $themeItem in $themes {
+                                // Create a selector CLASS-THEME and also THEME-CLASS.
+                                &.theme-#{$theme},
+                                .theme-#{$theme} & {
+                                  // Iterate over each property-key value.
+                                  @for $i from 1 through length($properties){
+                                    $property: nth($properties,$i);
+                                    $key: nth($keys,$i);
+                                    #{$property}: map-get($themeItem, $key);
+                                  }
+                                  // Finally add transitions over themified properties.
+                                  transition-property: #{$properties};
+                                  transition-duration: $transition-duration;
+                                }
+                              }
+                            }
+                          </code>
+                        </pre>
+
+                        <p class="flow-text">This code will generate, for every theme, a <em>themified</em> rule to assign the theme value(s) to every input CSS property(s). Note that I have also added transition effect to the <em>themified</em> properties to make theme changing
+                            nicer (unfortunately, a font family change cannot be transitionated).</p>
+
+                        <p class="flow-text">We are almost done! Here you have a basic usage example, either with single or mutiple properties, that you can add to your main <code>site.scss</code> file:</p>
+                        <pre>
+                          <code class="language-scss flow-text">
+                            .navbar {
+                                @include themify((background-color,box-shadow),(primary-color, shadow-dark));
+
+                                a {
+                                    @include themify(color, text-color-light);
+                                }
+                          </code>
+                        </pre>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="container">
+                    <div class="article-title">
+                        <h2>Final notes</h2>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="article-content">
+
+                        <p class="flow-text">Remember to add a default theme into your body markup. You can also themify your markup by components, or even mix themes all in one, its up to you!</p>
+                        <pre>
+                          <code class="language-markup flow-text">
+                            <xmp>
+                              <body class="theme-bw">
+                                ...
+                              </body>
+                            </xmp>
+                          </code>
+                        </pre>
+
+                        <p class="flow-text">And a JS function like this one based on regular expressions to quickly change your markup theme:</p>
+                        <pre>
+                          <code class="language-js flow-text">
+                            var themifyMe = function(themeName) {
+                                $(document).find("[class*='theme-']").attr("class", function(i, cls) {
+                                    return cls.replace(/theme-(.*)/, "theme-" + themeName);
+                                });
+                            }
+                          </code>
+                        </pre>
                     </div>
                 </div>
             </article>
@@ -116,7 +293,7 @@
 
         <!-- Secondary Panel Outtro -->
         <div class="" id="id-outtro">
-          <!-- TODO: Implementation pending -->
+            <!-- TODO: Implementation pending -->
         </div>
 
     </main>
@@ -124,15 +301,15 @@
     <!-- Themify floating menu -->
     <div class="themify-tool">
         <div class="fixed-action-btn horizontal">
-            <a class="btn-floating btn-large waves-effect tooltipped themify-tool__button" data-position="top"  data-tooltip="Change Me!">
+            <a class="btn-floating btn-large waves-effect tooltipped themify-tool__button" data-position="top" data-tooltip="Change Me!">
                 <i class="material-icons large">palette</i>
             </a>
             <ul>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Black and White" href="javascript:void(0)" onclick="themifyMe('bw')"><i class="material-icons">invert_colors</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Peach and Azure" href="javascript:void(0)" onclick="themifyMe('peach-azure')"><i class="material-icons">filter_vintage</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Teal and Orange" href="javascript:void(0)" onclick="themifyMe('teal-orange')"><i class="material-icons">star</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="High Contrast" href="javascript:void(0)" onclick="themifyMe('contrast')"><i class="material-icons">brightness_medium</i></a></li>
-                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top"  data-tooltip="Girly Purple" href="javascript:void(0)" onclick="themifyMe('purple')"><i class="material-icons">new_releases</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Black and White" href="javascript:void(0)" onclick="themifyMe('bw')"><i class="material-icons">invert_colors</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Peach and Azure" href="javascript:void(0)" onclick="themifyMe('peach-azure')"><i class="material-icons">filter_vintage</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Teal and Orange" href="javascript:void(0)" onclick="themifyMe('teal-orange')"><i class="material-icons">star</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="High Contrast" href="javascript:void(0)" onclick="themifyMe('contrast')"><i class="material-icons">brightness_medium</i></a></li>
+                <li><a class="btn-floating waves-effect tooltipped themify-tool__sub-button" data-position="top" data-tooltip="Girly Purple" href="javascript:void(0)" onclick="themifyMe('purple')"><i class="material-icons">new_releases</i></a></li>
             </ul>
         </div>
     </div>
@@ -187,6 +364,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.0.1/trianglify.min.js"></script>
+    <script type="text/javascript" src="./js/prism.js"></script>
     <script type="text/javascript" src="./js/site.js"></script>
 </body>
 
