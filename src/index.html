@@ -43,7 +43,7 @@
                 <ul class="side-nav" id="nav-mobile">
                     <li><a href="#id-key-intro">Intro</a></li>
                     <li><a href="#id-main-panel">Main</a></li>
-                    <li><a href="#id-outtro">Footer</a></li>
+                    <li><a href="#id-outtro">Share It</a></li>
                 </ul>
             </div>
         </div>
@@ -121,8 +121,7 @@
                         <p class="flow-text">The idea behind this demo site is to provide an easy way to apply <em>on-the-fly</em> themes without messing around with intensive JavaScript DOM modifications. Actually, this website just needs one <em>single-liner</em> JavaScript
                             function to do the job. <strong>Isn't it great?</strong></p>
                         <p class="flow-text">For this purpose, I will let SASS to take care of the CSS rules generation when building a theme. Rule schemes for each theme may bring dozens of variations, and thus, managing this code by hand is highly impractical.</p>
-                        <p class="flow-text">I recommend reading <strong><a href="https://www.sitepoint.com/sass-theming-neverending-story/">this interesting article</a></strong> by <strong><a href="http://hugogiraudel.com/">Hugo Giraudel</a></strong> where several approaches
-                            for this task are presented and documented. I have implemented a slightly modified version of the <em>individual mixins approach</em> as we will see next.</p>
+                        <p class="flow-text">I recommend reading <strong><a href="https://www.sitepoint.com/sass-theming-neverending-story/" target="_blank">this interesting article</a></strong> by <strong><a href="http://hugogiraudel.com/" target="_blank">Hugo Giraudel</a></strong>                            where several approaches for this task are presented and documented. I have implemented a slightly modified version of the <em>individual mixins approach</em> as we will see next.</p>
                     </div>
                 </div>
             </article>
@@ -252,8 +251,8 @@
                     </div>
                     <div class="divider"></div>
                     <div class="article-content">
-                      <p class="flow-text">We are almost done! Here you have a basic usage example, either with single or mutiple properties, that you can add to your main <code>site.scss</code> file:</p>
-                      <pre>
+                        <p class="flow-text">We are almost done! Here you have a basic usage example, either with single or mutiple properties, that you can add to your main <code>site.scss</code> file:</p>
+                        <pre>
                         <code class="language-scss flow-text">
                           .navbar {
                               @include themify((background-color,box-shadow),(primary-color, shadow-dark));
@@ -316,23 +315,28 @@
         <div class="" id="id-outtro">
             <div class="social-card-wrapper container">
                 <div class="row">
-                    <div class="col s12 m8 offset-m2 center">
+                    <div class="col s12 m8 offset-m2">
                         <div class="card social-card">
                             <div class="card-content social-card__content">
-                                <span class="card-title">Did you like it? Share it</span>
+                                <span class="card-title center-align">Did you like it? Share it</span>
                             </div>
-                            <div class="card-action social-card__share-area">
+                            <div class="card-action social-card__share-area center-align">
                                 <a class="share-link tooltipped" data-position="bottom" data-tooltip="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&t=Themify%20Me!" target="_blank"><i class="fa fa-facebook-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 
-                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Tweet" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&text=Themify%20Me!:%20https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&via=fjcalzado" target="_blank"><i class="fa fa-twitter-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Tweet" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&text=Themify%20Me!:%20https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&via=fjcalzado"
+                                    target="_blank"><i class="fa fa-twitter-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 
-                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&title=Themify%20Me!&summary=SASS%20Easy%20Theming%20Tutorial&source=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Share on LinkedIn" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&title=Themify%20Me!&summary=SASS%20Easy%20Theming%20Tutorial&source=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F"
+                                    target="_blank"><i class="fa fa-linkedin-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Share on LinkedIn</span></a>
+
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Code in GitHub" href="https://github.com/fjcalzado" target="_blank"><i class="fa fa-github-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Code in GitHub</span></a>
 
                                 <a class="share-link tooltipped" data-position="bottom" data-tooltip="Share on Google+" href="https://plus.google.com/share?url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F" target="_blank"><i class="fa fa-google-plus-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 
-                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Submit to Reddit" href="http://www.reddit.com/submit?url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&title=Themify%20Me!" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Submit to Reddit" href="http://www.reddit.com/submit?url=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&title=Themify%20Me!" target="_blank"><i class="fa fa-reddit-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 
-                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Post to Tumblr" href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&t=Themify%20Me!&s=" target="_blank" title="Post to Tumblr"><i class="fa fa-tumblr-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+                                <a class="share-link tooltipped" data-position="bottom" data-tooltip="Post to Tumblr" href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Ffjcalzado.github.io%2FDemoSeries-SASS-Easy-Theming%2F&t=Themify%20Me!&s=" target="_blank"><i class="fa fa-tumblr-square fa-3x share-link__icon" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+
                             </div>
                         </div>
                     </div>

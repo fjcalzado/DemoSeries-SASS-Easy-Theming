@@ -170,14 +170,16 @@ strong {
     }
 
     &__share-area {
+        
         .share-link {
-          @include themify(color, secondary-color);
+            @include themify(color, secondary-color);
+
             &__icon {
                 @include themify((color, opacity), (secondary-color, opacity-semi));
 
-                &:hover{
-                  opacity: 1.0;
-                  transition-duration: 0.2s;
+                &:hover {
+                    opacity: 1.0;
+                    transition-duration: 0.2s;
                 }
             }
         }
@@ -196,7 +198,12 @@ strong {
     }
 
     .btn {
-        @include themify(background, secondary-color);
+        @include themify((color, background, opacity), (text-color-light, secondary-color, opacity-semi));
+
+        &:hover {
+          opacity: 1.0;
+          transition-duration: 0.2s;
+        }
     }
 
     &__col-left {
