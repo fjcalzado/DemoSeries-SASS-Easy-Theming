@@ -558,7 +558,8 @@ strong {
 @keyframes highlight-expand {
   0% { }
   50% {
-    filter: brightness(130%) saturate(150%); }
+    filter: brightness(130%) saturate(150%);
+    transform: scale3d(1.1, 1.1, 1); }
   100% { } }
 
 .themify-tool__button {
