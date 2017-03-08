@@ -857,33 +857,47 @@ strong {
 
 .page-footer .btn.theme-bw,
 .theme-bw .page-footer .btn {
+  color: white;
   background: #a1a1a1;
-  transition-property: background;
+  opacity: 0.7;
+  transition-property: color, background, opacity;
   transition-duration: 1.5s; }
 
 .page-footer .btn.theme-peach-azure,
 .theme-peach-azure .page-footer .btn {
+  color: white;
   background: #27a599;
-  transition-property: background;
+  opacity: 0.7;
+  transition-property: color, background, opacity;
   transition-duration: 1.5s; }
 
 .page-footer .btn.theme-teal-orange,
 .theme-teal-orange .page-footer .btn {
+  color: #fff3e6;
   background: #ff8800;
-  transition-property: background;
+  opacity: 0.7;
+  transition-property: color, background, opacity;
   transition-duration: 1.5s; }
 
 .page-footer .btn.theme-contrast,
 .theme-contrast .page-footer .btn {
+  color: white;
   background: #f5ec3d;
-  transition-property: background;
+  opacity: 0.7;
+  transition-property: color, background, opacity;
   transition-duration: 1.5s; }
 
 .page-footer .btn.theme-purple,
 .theme-purple .page-footer .btn {
+  color: white;
   background: #f28cd9;
-  transition-property: background;
+  opacity: 0.7;
+  transition-property: color, background, opacity;
   transition-duration: 1.5s; }
+
+.page-footer .btn:hover {
+  opacity: 1.0;
+  transition-duration: 0.2s; }
 
 .page-footer__col-left {
   text-align: right; }
