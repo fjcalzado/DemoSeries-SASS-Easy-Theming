@@ -1,223 +1,244 @@
-@import "init";
-@import "mixins";
-/*GENERAL*/
+@import 'init';
+@import 'mixins';
+
+$traslucent-alpha: rgba(0, 0, 0, .1);
+
+// General
 body {
-    background-color: white;
-    @include themify(font-family, primary-font);
+  @include themify(font-family, primary-font);
+  background-color: rgb;
 }
 
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .material-tooltip {
-    .backdrop {
-        @include themify(background-color, secondary-color);
-    }
+  .backdrop {
+    @include themify(background-color, secondary-color);
+  }
 }
-/*HEADER SECTION*/
+
+// HEADER SECTION
 .header-jumbo {
-    // Warning: do not transitionate background-color as it must be computed and retrieved
-    // by JS method 'themifyHeaderJumbo'
-    @include themify((background-color, color), (secondary-color, primary-color), 0s);
+  // Warning: do not transitionate background-color as it must be computed and retrieved
+  // by JS method 'themifyHeaderJumbo'
+  @include themify((background-color, color), (secondary-color, primary-color), 0s);
 
-    &__canvas {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
-        // This is just here to add transition duration to the background.
-        // Background is gonna be changed dinamically by JS.
-        @include themify(background, "");
+  &__canvas {
+    // This is just here to add transition duration to the background.
+    // Background is gonna be changed dinamically by JS.
+    @include themify(background, '');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  &__usable-area {
+    padding: 5vh 0;
+  }
+
+  &__title {
+    h1 {
+      @include themify((color, font-family), (text-color-light, primary-font));
+      text-align: right;
+      font-weight: bolder;
+      font-size: 17vmin;
+      margin: 0;
     }
+  }
 
-    &__usable-area {
-        padding: 5vh 0;
+  &__updater {
+    padding: 3vmin 0 0 3vmin;
+
+    .btn-floating {
+      background-color: $traslucent-alpha;
     }
-
-    &__title {
-        h1 {
-            text-align: right;
-            font-weight: bolder;
-            font-size: 17vmin;
-            margin: 0;
-            @include themify((color, font-family), (text-color-light, primary-font));
-        }
-    }
-
-    &__updater {
-        padding: 3vmin 0 0 3vmin;
-
-        .btn-floating {
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-    }
+  }
 }
 
 .nav-sticky {
-    z-index: 99;
-    // Put it on z-top when fixed on top of the page, otherwise, some materialize components may interfere.
-    @include themify((background,box-shadow),(primary-color, shadow-dark));
+  // Put it on z-top when fixed on top of the page, otherwise, some materialize components may interfere.
+  @include themify((background, box-shadow), (primary-color, shadow-dark));
+  z-index: 99;
+
+  a {
+    @include themify(color, text-color-light);
+  }
+
+  .brand-logo {
+    .material-icons {
+      @include themify(color, text-color-light);
+    }
+  }
+
+  .side-nav {
+    a {
+      @include themify(color, text-color-dark);
+    }
+  }
+}
+
+// MAIN
+.key-intro {
+  @include themify((color, background, text-shadow), (text-color-light, grey-tone, shadow-difuse));
+  padding-top: 2rem;
+
+  &__title {
+    padding: 1rem;
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .col {
+    padding: 2rem 0;
+  }
+
+  &__item {
+    padding: 1rem;
 
     a {
-        @include themify(color, text-color-light);
+      @include themify(color, text-color-light);
     }
 
-    .brand-logo .material-icons {
-        @include themify(color, text-color-light);
-    }
+    .modal {
+      @include themify(color, text-color-dark);
 
-    .side-nav {
-        a {
-            @include themify(color, text-color-dark);
-        }
-    }
-}
-/*MAIN*/
-.key-intro {
-    padding-top: 2rem;
-    @include themify((color, background, text-shadow), (text-color-light, grey-tone, shadow-difuse));
-
-    &__title {
-        padding: 1rem;
-
-        h4 {
-            margin: 0;
-        }
-    }
-
-    .col {
-        padding: 2rem 0;
-    }
-
-    &__item {
-        padding: 1rem;
-
-        a {
-            @include themify(color, text-color-light);
-        }
-
-        .modal,
-        .modal a {
-            @include themify(color, text-color-dark);
-        }
-    }
-}
-/*Articles*/
-.articles {
-    article {
-        padding: 4rem 0 2rem;
+      a {
         @include themify(color, text-color-dark);
-
-        &:nth-of-type(even) {
-            @include themify(background, grey-tone-subtle);
-        }
-
-        a {
-            @include themify(color, link-color-dark);
-        }
-
-        .tabs {
-            a {
-                @include themify(color, secondary-color);
-            }
-
-            .indicator {
-                @include themify(background, primary-color);
-            }
-        }
-
-        pre {
-            border-width: thin;
-            border-radius: 1vmin;
-            border-style: solid;
-            @include themify((background, border-color), (secondary-color-washed, text-color-light));
-        }
+     }
     }
+  }
 }
-/*Themify Tool*/
+
+// Articles
+.articles {
+  article {
+    @include themify(color, text-color-dark);
+    padding: 4rem 0 2rem;
+
+    &:nth-of-type(even) {
+      @include themify(background, grey-tone-subtle);
+    }
+
+    a {
+      @include themify(color, link-color-dark);
+    }
+
+    .tabs {
+      a {
+        @include themify(color, secondary-color);
+      }
+
+      .indicator {
+        @include themify(background, primary-color);
+      }
+    }
+
+    pre {
+      @include themify((background, border-color), (secondary-color-washed, text-color-light));
+      border-width: thin;
+      border-radius: 1vmin;
+      border-style: solid;
+    }
+  }
+}
+// Themify Tool
 @keyframes highlight-expand {
-    0% {}
-    50% { filter: brightness(130%) saturate(150%); transform: scale3d(1.1, 1.1, 1);}
-    100% {}
+  //0% {}
+  50% {
+    filter: brightness(130%) saturate(150%);
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  //100% {}
 }
 
 .themify-tool {
-    &__button {
-        @include themify(background, secondary-color);
-        animation-name: highlight-expand;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-    }
+  &__button {
+    @include themify(background, secondary-color);
 
-    &__sub-button {
-        @include themify(background, secondary-color);
+    @include respond-to(desktop) {
+      animation-name: highlight-expand;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
+  }
+
+  &__sub-button {
+    @include themify(background, secondary-color);
+  }
 }
-/*Social Card*/
+
+// Social Card
 .social-card-wrapper {
-    padding: 5rem 0;
+  padding: 5rem 0;
 }
 
 .social-card {
-    @include themify(box-shadow, shadow-difuse);
+  @include themify(box-shadow, shadow-difuse);
 
-    &__content {
-        @include themify((color, background),(text-color-light, primary-color));
-    }
-
-    &__share-area {
-
-        .share-link {
-            @include themify(color, secondary-color);
-
-            &__icon {
-                @include themify((color, opacity), (secondary-color, opacity-semi));
-
-                &:hover {
-                    opacity: 1.0;
-                    transition-duration: 0.2s;
-                }
-            }
-        }
-    }
-}
-/*Footer*/
-.page-footer {
+  &__content {
     @include themify((color, background), (text-color-light, primary-color));
+  }
 
-    a {
-        @include themify(color, link-color-light);
+  &__share-area {
+    .share-link {
+      @include themify(color, secondary-color);
 
-        &:not(.btn):hover {
-            @include themify(color, secondary-color, 0.15s);
-        }
-    }
-
-    .btn {
-        @include themify((color, background, opacity), (text-color-light, secondary-color, opacity-semi));
+      &__icon {
+        @include themify((color, opacity), (secondary-color, opacity-semi));
 
         &:hover {
-          opacity: 1.0;
-          transition-duration: 0.2s;
+          opacity: 1;
+          transition-duration: .2s;
         }
+      }
     }
+  }
+}
 
-    &__col-left {
-        text-align: right;
+// Footer
+.page-footer {
+  @include themify((color, background), (text-color-light, primary-color));
+
+  a {
+    @include themify(color, link-color-light);
+
+    &:not(.btn) {
+      &:hover {
+        @include themify(color, secondary-color, .15s);
+      }
     }
+  }
 
+  .btn {
+    @include themify((color, background, opacity), (text-color-light, secondary-color, opacity-semi));
+
+    &:hover {
+      opacity: 1;
+      transition-duration: .2s;
+    }
+  }
+
+  &__col-left {
+    text-align: right;
+  }
+
+  &__col-right {
+    text-align: left;
+  }
+
+  .footer-copyright {
+    font-size: 1em;
+  }
+
+  @include respond-to(mobile) {
+    &__col-left,
     &__col-right {
-        text-align: left;
+      text-align: center;
+      padding: 1rem 0 0;
     }
-
-    .footer-copyright {
-        font-size: 1.0em;
-    }
-    @media screen and (max-width: 600px) {
-        &__col-left,
-        &__col-right {
-            text-align: center;
-            padding: 1rem 0 0;
-        }
-    }
+  }
 }

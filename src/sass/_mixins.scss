@@ -1,26 +1,40 @@
-@import "themes";
+@import 'themes';
 
-/// Single Themify mixin. It accepts several properties and keys.
-/// @access public.
-/// @param {List} $properties - Properties to themify.
-/// @param {List} $keys - Theme items to map properies against to.
-/// @param {} $transition-duration - Duration in seconds for transition effect.
-/// @param {Map} $themes [$themes] - Map of themes to use.
-@mixin themify($properties, $keys, $transition-duration: $theme-transition-duration, $themes: $themeCollection) {
+// Single Themify mixin. It accepts several properties and keys.
+// @param {List} $properties: Properties to themify.
+// @param {List} $keys: Theme items to map properies against to.
+// @param $transition-duration: Duration in seconds for transition effect.
+// @param {Map} $themes [$themes] - Map of themes to use.
+@mixin themify($properties, $keys, $transition-duration: $theme-transition-duration, $themes: $theme-collection) {
   // Iterate over the themes.
-  @each $theme, $themeItem in $themes {
+  @each $theme, $theme-item in $themes {
     // Create a selector CLASS -> THEME and also THEME -> CLASS.
     &.theme-#{$theme},
     .theme-#{$theme} & {
       // Iterate over each property-key value.
-      @for $i from 1 through length($properties){
-        $property: nth($properties,$i);
-        $key: nth($keys,$i);
-        #{$property}: map-get($themeItem, $key);
+      @for $i from 1 through length($properties) {
+        $property: nth($properties, $i);
+        $key: nth($keys, $i);
+        #{$property}: map-get($theme-item, $key);
       }
       // Finally add transitions over themified properties.
       transition-property: #{$properties};
       transition-duration: $transition-duration;
     }
+  }
+}
+
+
+// Device specific media query helper.
+// @param $materialize-device: device out of mobile, tablet or desktop.
+$materialize-mobile-brkpnt: 600px;
+$materialize-tablet-brkpnt: 992px;
+@mixin respond-to($materialize-device) {
+  @if $materialize-device == mobile {
+    @media screen and (max-width: $materialize-mobile-brkpnt) { @content; }
+  } @else if $materialize-device == tablet {
+    @media screen and (min-width: $materialize-mobile-brkpnt + 1) and (max-width: $materialize-tablet-brkpnt) { @content; }
+  } @else if $materialize-device == desktop {
+    @media screen and (min-width: $materialize-tablet-brkpnt + 1) { @content; }
   }
 }
