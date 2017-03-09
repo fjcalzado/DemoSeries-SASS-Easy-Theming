@@ -1,12 +1,11 @@
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
-@import "https://fonts.googleapis.com/css?family=Raleway:0,600,800";
-@import "https://fonts.googleapis.com/css?family=Ubuntu:0,600,800";
-@import "https://fonts.googleapis.com/css?family=Open+Sans:0,600,800";
-@import "https://fonts.googleapis.com/css?family=Roboto+Mono:0,600,800";
-@import "https://fonts.googleapis.com/css?family=Montserrat:0,600,800";
-/*GENERAL*/
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import 'https://fonts.googleapis.com/css?family=Raleway:0,600,800';
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:0,600,800';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:0,600,800';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:0,600,800';
+@import 'https://fonts.googleapis.com/css?family=Montserrat:0,600,800';
 body {
-  background-color: white; }
+  background-color: rgb; }
   body.theme-bw,
   .theme-bw body {
     font-family: Raleway;
@@ -66,7 +65,6 @@ strong {
   transition-property: background-color;
   transition-duration: 1.5s; }
 
-/*HEADER SECTION*/
 .header-jumbo.theme-bw,
 .theme-bw .header-jumbo {
   background-color: #a1a1a1;
@@ -279,7 +277,6 @@ strong {
     transition-property: color;
     transition-duration: 1.5s; }
 
-/*MAIN*/
 .key-intro {
   padding-top: 2rem; }
   .key-intro.theme-bw,
@@ -351,47 +348,56 @@ strong {
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-bw,
-    .theme-bw .key-intro__item .modal,
-    .key-intro__item .modal a.theme-bw,
-    .theme-bw
-    .key-intro__item .modal a {
+    .theme-bw .key-intro__item .modal {
       color: #4a4a4a;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-peach-azure,
-    .theme-peach-azure .key-intro__item .modal,
-    .key-intro__item .modal a.theme-peach-azure,
-    .theme-peach-azure
-    .key-intro__item .modal a {
+    .theme-peach-azure .key-intro__item .modal {
       color: black;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-teal-orange,
-    .theme-teal-orange .key-intro__item .modal,
-    .key-intro__item .modal a.theme-teal-orange,
-    .theme-teal-orange
-    .key-intro__item .modal a {
+    .theme-teal-orange .key-intro__item .modal {
       color: #091b20;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-contrast,
-    .theme-contrast .key-intro__item .modal,
-    .key-intro__item .modal a.theme-contrast,
-    .theme-contrast
-    .key-intro__item .modal a {
+    .theme-contrast .key-intro__item .modal {
       color: #0d0d0d;
       transition-property: color;
       transition-duration: 1.5s; }
     .key-intro__item .modal.theme-purple,
-    .theme-purple .key-intro__item .modal,
+    .theme-purple .key-intro__item .modal {
+      color: #1a141f;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal a.theme-bw,
+    .theme-bw .key-intro__item .modal a {
+      color: #4a4a4a;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal a.theme-peach-azure,
+    .theme-peach-azure .key-intro__item .modal a {
+      color: black;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal a.theme-teal-orange,
+    .theme-teal-orange .key-intro__item .modal a {
+      color: #091b20;
+      transition-property: color;
+      transition-duration: 1.5s; }
+    .key-intro__item .modal a.theme-contrast,
+    .theme-contrast .key-intro__item .modal a {
+      color: #0d0d0d;
+      transition-property: color;
+      transition-duration: 1.5s; }
     .key-intro__item .modal a.theme-purple,
-    .theme-purple
-    .key-intro__item .modal a {
+    .theme-purple .key-intro__item .modal a {
       color: #1a141f;
       transition-property: color;
       transition-duration: 1.5s; }
 
-/*Articles*/
 .articles article {
   padding: 4rem 0 2rem; }
   .articles article.theme-bw,
@@ -554,43 +560,46 @@ strong {
       transition-property: background, border-color;
       transition-duration: 1.5s; }
 
-/*Themify Tool*/
 @keyframes highlight-expand {
-  0% { }
   50% {
     filter: brightness(130%) saturate(150%);
-    transform: scale3d(1.1, 1.1, 1); }
-  100% { } }
+    transform: scale3d(1.1, 1.1, 1); } }
 
-.themify-tool__button {
-  animation-name: highlight-expand;
-  animation-duration: 2s;
-  animation-iteration-count: infinite; }
-  .themify-tool__button.theme-bw,
-  .theme-bw .themify-tool__button {
-    background: #a1a1a1;
-    transition-property: background;
-    transition-duration: 1.5s; }
-  .themify-tool__button.theme-peach-azure,
-  .theme-peach-azure .themify-tool__button {
-    background: #27a599;
-    transition-property: background;
-    transition-duration: 1.5s; }
-  .themify-tool__button.theme-teal-orange,
-  .theme-teal-orange .themify-tool__button {
-    background: #ff8800;
-    transition-property: background;
-    transition-duration: 1.5s; }
-  .themify-tool__button.theme-contrast,
-  .theme-contrast .themify-tool__button {
-    background: #f5ec3d;
-    transition-property: background;
-    transition-duration: 1.5s; }
-  .themify-tool__button.theme-purple,
-  .theme-purple .themify-tool__button {
-    background: #f28cd9;
-    transition-property: background;
-    transition-duration: 1.5s; }
+.themify-tool__button.theme-bw,
+.theme-bw .themify-tool__button {
+  background: #a1a1a1;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.themify-tool__button.theme-peach-azure,
+.theme-peach-azure .themify-tool__button {
+  background: #27a599;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.themify-tool__button.theme-teal-orange,
+.theme-teal-orange .themify-tool__button {
+  background: #ff8800;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.themify-tool__button.theme-contrast,
+.theme-contrast .themify-tool__button {
+  background: #f5ec3d;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+.themify-tool__button.theme-purple,
+.theme-purple .themify-tool__button {
+  background: #f28cd9;
+  transition-property: background;
+  transition-duration: 1.5s; }
+
+@media screen and (min-width: 993px) {
+  .themify-tool__button {
+    animation-name: highlight-expand;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; } }
 
 .themify-tool__sub-button.theme-bw,
 .theme-bw .themify-tool__sub-button {
@@ -622,7 +631,6 @@ strong {
   transition-property: background;
   transition-duration: 1.5s; }
 
-/*Social Card*/
 .social-card-wrapper {
   padding: 5rem 0; }
 
@@ -757,10 +765,9 @@ strong {
   transition-duration: 1.5s; }
 
 .social-card__share-area .share-link__icon:hover {
-  opacity: 1.0;
-  transition-duration: 0.2s; }
+  opacity: 1;
+  transition-duration: .2s; }
 
-/*Footer*/
 .page-footer.theme-bw,
 .theme-bw .page-footer {
   color: white;
@@ -897,8 +904,8 @@ strong {
   transition-duration: 1.5s; }
 
 .page-footer .btn:hover {
-  opacity: 1.0;
-  transition-duration: 0.2s; }
+  opacity: 1;
+  transition-duration: .2s; }
 
 .page-footer__col-left {
   text-align: right; }
@@ -907,7 +914,7 @@ strong {
   text-align: left; }
 
 .page-footer .footer-copyright {
-  font-size: 1.0em; }
+  font-size: 1em; }
 
 @media screen and (max-width: 600px) {
   .page-footer__col-left, .page-footer__col-right {

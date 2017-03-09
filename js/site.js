@@ -80,6 +80,7 @@ $(document).ready(function() {
     });
     $(window).resize(function() {
         navbarInitialOffset = getNavbarOffset();
+        checkStickyNav();
         checkThemifyTool();
 
         // Lets wait a timeout for the resize to completely finish.
