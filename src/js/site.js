@@ -33,8 +33,13 @@ $(document).ready(function() {
 
     // *** Sticky Navbar Logic ***
     var getNavbarOffset = function() {
-        return $(".nav-sticky").offset().top;
-    }
+        var jqNavbar = $(".nav-sticky");
+        if (jqNavbar.css("position") == "static") {
+            return $(".nav-sticky").offset().top;
+        } else {
+            return navbarInitialOffset;
+        }
+    };
     var navbarInitialOffset = getNavbarOffset();
     var navbarHeight = $(".nav-sticky").height();
     var checkStickyNav = function() {
@@ -52,7 +57,7 @@ $(document).ready(function() {
             $(".nav-sticky").css("position", "static");
             $("main").css("padding-top", 0);
         }
-    }
+    };
 
     // *** Themify Tool Logic ***
     var themifyToolOnlyOnMain = false;
@@ -71,7 +76,7 @@ $(document).ready(function() {
             }
         }
 
-    }
+    };
 
     // Bind checkers to Scroll and Resize
     $(window).scroll(function() {
@@ -86,12 +91,12 @@ $(document).ready(function() {
         // Lets wait a timeout for the resize to completely finish.
         // This will make resizing feels lighter preventing heavy
         // tasks to be done continuously while resizing.
-        clearTimeout(window.resizedFinished)
+        clearTimeout(window.resizedFinished);
         window.resizedFinished = setTimeout(function() {
-          themifyHeaderJumbo();
+            themifyHeaderJumbo();
         }, 300);
     });
-})
+});
 
 // Themify tool apply function.
 var themifyMe = function(themeName) {
@@ -104,8 +109,7 @@ var themifyMe = function(themeName) {
 
     // STEP 2: Update header jumbo 'canvas'.
     themifyHeaderJumbo();
-}
-
+};
 // Helper method to update header jumbo background in canvas mode.
 var themifyHeaderJumbo = function() {
     // We are going to regenerate header jumbo canvas dinamically
@@ -128,4 +132,4 @@ var themifyHeaderJumbo = function() {
     });
     var patternUrl = "url('" + pattern.png() + "')";
     $(".header-jumbo__canvas").css("background-image", patternUrl);
-}
+};
